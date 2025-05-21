@@ -15,8 +15,6 @@ def chat():
             question_text = question.text
         else:
             question_text = "Lỗi xin vui lòng thử lại..."
-    else:
-        print("Xin hãy nhập vào chatbox ")
     return render_template("index.html", question = question_text)
 
 if __name__ == "__main__":
