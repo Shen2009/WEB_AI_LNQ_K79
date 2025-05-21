@@ -2,19 +2,27 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Chat Bot du lịch </title>
+  <title>Du lịch Thái Nguyên</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<body>
-  <h1>🤖 Chat Bot 🤖</h1>
-  <form method="POST">
-    <textarea name="input" rows="5" cols="60" placeholder="Nhập câu hỏi tại đây..."></textarea><br><br>
-    <input type="submit" value="Gửi">
-  </form>
-  {% if question %}
-    <h2>🤖:</h2>
-    <div style="white-space: pre-wrap; border: 1px solid #818ac2; padding: 10px;">
-    {{ question |safe }}
-    </div>
-  {% endif %}
+<body class="home-page">
+  <!-- Thanh menu -->
+  <nav class="navbar">
+    <div class="navbar-brand">Du lịch Thái Nguyên</div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <ul class="navbar-menu" id="navbar-menu">
+      <li><a href="{{ url_for('chat') }}">Chatbot AI</a></li>
+      <li><a href="#">Địa điểm du lịch (Sắp ra mắt)</a></li>
+      <li><a href="#">Lịch trình gợi ý (Sắp ra mắt)</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    // Toggle menu với hiệu ứng trượt
+    function toggleMenu() {
+      const menu = document.getElementById('navbar-menu');
+      menu.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>

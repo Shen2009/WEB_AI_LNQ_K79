@@ -1,0 +1,248 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #333;
+  font-size: 1.2em;
+}
+
+/* Trang chính */
+body.home-page {
+  background-image: url('hinh_nen.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Thanh menu */
+.navbar {
+  background-color: #28a745;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #28a745;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.navbar-menu.active {
+  max-height: 300px;
+}
+
+.navbar-menu li {
+  margin: 5px 0;
+}
+
+.navbar-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar-menu a:hover,
+.navbar-menu a.active {
+  background-color: #218838;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+/* Khung chat */
+.chat-container {
+  width: 100%;
+  max-width: 1200px;
+  max-width: 90vw;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.chat-header {
+  background-color: #28a745;
+  color: #fff;
+  padding: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.message {
+  display: inline-block;
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 18px;
+  line-height: 1.5;
+  font-size: 1.3em;
+  position: relative;
+}
+
+.bot-message {
+  background-color: #e9ecef;
+  margin-right: auto;
+  text-align: left;
+  border-bottom-left-radius: 0;
+  white-space: pre-wrap; /* Giữ định dạng cách dòng */
+}
+
+.user-message {
+  background-color: #28a745;
+  color: #fff;
+  margin-left: auto;
+  text-align: left;
+  border-bottom-right-radius: 0;
+}
+
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #dfe1e5;
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.chat-footer textarea {
+  flex: 1;
+  border: 2px solid #dfe1e5;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 1.2em;
+  resize: none;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.chat-footer textarea:focus {
+  border-color: #28a745;
+}
+
+.chat-footer textarea:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+.chat-footer button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1.2em;
+}
+
+.chat-footer button:hover {
+  background-color: #218838;
+}
+
+/* Hiệu ứng loading */
+.loading {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #28a745;
+  border-radius: 50%;
+  margin: 0 4px;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-12px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chat-container {
+    margin: 10px;
+    height: 70vh;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+}
