@@ -13,7 +13,7 @@
   {% if question %}
     <h2>🤖:</h2>
     <div style="white-space: pre-wrap; border: 1px solid #818ac2; padding: 10px;">
-    {{ question }}
+    {{ question |safe }}
     </div>
   {% endif %}
 </body>
