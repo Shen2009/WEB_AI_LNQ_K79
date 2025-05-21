@@ -2,19 +2,18 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Gemini AI Web</title>
+  <title>Chat Bot du lịch </title>
 </head>
 <body>
-  <h1>Gemini AI (Google Generative)</h1>
+  <h1>🤖 Chat Bot 🤖</h1>
   <form method="POST">
-    <textarea name="prompt" rows="5" cols="60" placeholder="Nhập yêu cầu (prompt) tại đây..."></textarea><br><br>
+    <textarea name="input" rows="5" cols="60" placeholder="Nhập câu hỏi tại đây..."></textarea><br><br>
     <input type="submit" value="Gửi yêu cầu">
   </form>
-
-  {% if result %}
-    <h2>Kết quả từ Gemini:</h2>
+  {% if question %}
+    <h2>🤖:</h2>
     <div style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px;">
-      {{ result }}
+    {{ question }}
     </div>
   {% endif %}
 </body>
