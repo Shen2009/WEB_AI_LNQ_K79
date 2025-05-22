@@ -4,25 +4,251 @@
   <meta charset="UTF-8">
   <title>Du lịch Thái Nguyên</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="home-page">
   <!-- Thanh menu -->
   <nav class="navbar">
     <div class="navbar-brand">Du lịch Thái Nguyên</div>
+    <div class="navbar-menu-container">
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="#">Trống</a></li>
+        <li><a href="#">Trống</a></li>
+        <li><a href="#">Trống</a></li>
+        <li><a href="#">Trống</a></li>
+        <li><a href="#">Trống</a></li>
+        <li><a href="#">Trống</a></li>
+        <li><a href="#">Trống</a></li>
+      </ul>
+    </div>
     <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <ul class="navbar-menu" id="navbar-menu">
-      <li><a href="{{ url_for('chat') }}">Chatbot AI</a></li>
-      <li><a href="#">Địa điểm du lịch (Sắp ra mắt)</a></li>
-      <li><a href="#">Lịch trình gợi ý (Sắp ra mắt)</a></li>
-    </ul>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <i class="fas fa-moon"></i>
+    </button>
   </nav>
 
+  <!-- Biểu tượng chatbot -->
+  <div class="chatbot-icon" id="chatbot-icon">
+    <img src="{{ url_for('static', filename='icon.jpg') }}" alt="Chatbot">
+  </div>
+
+  <!-- Khung chat popup -->
+  <div class="chat-container" id="chat-container">
+    <div class="chat-header">
+      <h2>🤖 Chatbot Du lịch</h2>
+      <div>
+        <span class="minimize-btn" onclick="minimizeChat()">-</span>
+        <span class="close-btn" onclick="clearAndCloseChat()">×</span>
+      </div>
+    </div>
+    <div class="chat-body" id="chat-body">
+      {% if user_input %}
+        <div class="message-wrapper">
+          <div class="message user-message">
+            <span>{{ user_input }}</span>
+          </div>
+        </div>
+      {% endif %}
+      {% if bot_response %}
+        <div class="message-wrapper">
+          <div class="message bot-message">
+            <span style="white-space: pre-wrap;">{{ bot_response }}</span>
+          </div>
+        </div>
+      {% endif %}
+      <div class="loading" id="loading" style="display: none;">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    <form class="chat-footer" id="chat-form">
+      <textarea name="input" placeholder="Nhập câu hỏi về du lịch tại đây..."></textarea>
+      <button type="button" onclick="sendMessage()">Gửi</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
+    const chatIcon = document.getElementById('chatbot-icon');
+    const chatContainer = document.getElementById('chat-container');
+    const form = document.getElementById('chat-form');
+    const textarea = form.querySelector('textarea');
+    const loading = document.getElementById('loading');
+    const chatBody = document.getElementById('chat-body');
+
+    let isDragging = false;
+    let initialX = 0;
+    let initialY = 0;
+    let currentX = 20;
+    let currentY = 20;
+    let clickTimeout = null;
+    let clickStartTime = 0;
+    const dragThreshold = 200;
+
     // Toggle menu với hiệu ứng trượt
     function toggleMenu() {
       const menu = document.getElementById('navbar-menu');
       menu.classList.toggle('active');
     }
+
+    // Chuyển đổi chế độ Dark/Light
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      const moonIcon = document.querySelector('.theme-toggle i');
+      if (document.body.classList.contains('dark-mode')) {
+        moonIcon.classList.remove('fa-moon');
+        moonIcon.classList.add('fa-sun');
+      } else {
+        moonIcon.classList.remove('fa-sun');
+        moonIcon.classList.add('fa-moon');
+      }
+    }
+
+    // Mở/đóng khung chat với hiệu ứng fade
+    function toggleChat(event) {
+      if (chatContainer.classList.contains('visible')) {
+        chatContainer.classList.remove('visible');
+      } else {
+        chatContainer.classList.add('visible');
+        updateChatPosition();
+      }
+    }
+
+    // Ẩn khung chat với hiệu ứng fade
+    function minimizeChat() {
+      chatContainer.classList.remove('visible');
+    }
+
+    // Xóa dữ liệu và đóng khung chat
+    function clearAndCloseChat() {
+      chatBody.innerHTML = '';
+      chatContainer.classList.remove('visible');
+      textarea.value = '';
+    }
+
+    // Gửi tin nhắn bằng AJAX
+    function sendMessage() {
+      const input = textarea.value.trim();
+      if (input) {
+        showLoading();
+        $.post('/', { input: input }, function(response) {
+          chatBody.innerHTML = response;
+          textarea.value = '';
+          hideLoading();
+          scrollToBottom();
+        }).fail(function() {
+          hideLoading();
+          alert('Lỗi khi gửi tin nhắn.');
+        });
+      } else {
+        hideLoading();
+        alert('Vui lòng nhập câu hỏi.');
+      }
+    }
+
+    // Hiển thị loading
+    function showLoading() {
+      loading.style.display = 'flex';
+      textarea.disabled = true;
+    }
+
+    // Ẩn loading
+    function hideLoading() {
+      loading.style.display = 'none';
+      textarea.disabled = false;
+    }
+
+    // Gửi khi nhấn Enter
+    textarea.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        showLoading();
+        sendMessage();
+      }
+    });
+
+    // Cuộn xuống tin nhắn mới nhất
+    function scrollToBottom() {
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    // Cập nhật nội dung từ server
+    window.addEventListener('load', function() {
+      hideLoading();
+      scrollToBottom();
+    });
+
+    // Kéo thả biểu tượng chatbot
+    chatIcon.addEventListener('mousedown', startDragging);
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('mouseup', stopDragging);
+
+    function startDragging(e) {
+      if (e.button === 0) {
+        e.preventDefault();
+        initialX = e.clientX - currentX;
+        initialY = e.clientY - currentY;
+        clickStartTime = Date.now();
+        isDragging = true;
+        chatIcon.style.cursor = 'grabbing';
+      }
+    }
+
+    function drag(e) {
+      if (isDragging) {
+        e.preventDefault();
+        currentX = e.clientX - initialX;
+        currentY = e.clientY - initialY;
+
+        currentX = Math.max(0, Math.min(currentX, window.innerWidth - chatIcon.offsetWidth));
+        currentY = Math.max(0, Math.min(currentY, window.innerHeight - chatIcon.offsetHeight));
+
+        chatIcon.style.left = currentX + 'px';
+        chatIcon.style.top = currentY + 'px';
+
+        if (chatContainer.classList.contains('visible')) {
+          updateChatPosition();
+        }
+      }
+    }
+
+    function stopDragging(e) {
+      if (isDragging) {
+        isDragging = false;
+        chatIcon.style.cursor = 'move';
+
+        const clickDuration = Date.now() - clickStartTime;
+        if (clickDuration < dragThreshold) {
+          toggleChat(e);
+        }
+      }
+    }
+
+    function updateChatPosition() {
+      const iconRect = chatIcon.getBoundingClientRect();
+      const chatWidth = chatContainer.offsetWidth;
+      const windowWidth = window.innerWidth;
+      const margin = 10;
+
+      if (iconRect.left + chatWidth + margin > windowWidth) {
+        chatContainer.style.left = (iconRect.left - chatWidth - margin) + 'px';
+        chatContainer.style.right = 'auto';
+      } else {
+        chatContainer.style.left = (iconRect.left + chatIcon.offsetWidth + margin) + 'px';
+        chatContainer.style.right = 'auto';
+      }
+
+      chatContainer.style.top = (iconRect.top - chatContainer.offsetHeight + chatIcon.offsetHeight + margin) + 'px';
+    }
+
+    window.addEventListener('resize', function() {
+      if (chatContainer.classList.contains('visible')) {
+        updateChatPosition();
+      }
+    });
   </script>
+</head>
+<body>
 </body>
 </html>
