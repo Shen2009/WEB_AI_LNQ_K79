@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Du lịch Thái Nguyên - Chatbot</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
 </head>
 <body>
   <!-- Thanh menu -->
@@ -11,9 +11,8 @@
     <div class="navbar-brand">Du lịch Thái Nguyên</div>
     <button class="hamburger" onclick="toggleMenu()">☰</button>
     <ul class="navbar-menu" id="navbar-menu">
+      <li><a href="{{ url_for('index') }}" class="active">Trang chủ</a></li>
       <li><a href="{{ url_for('chat') }}" class="active">Chatbot AI</a></li>
-      <li><a href="#">Địa điểm du lịch (Sắp ra mắt)</a></li>
-      <li><a href="#">Lịch trình gợi ý (Sắp ra mắt)</a></li>
     </ul>
   </nav>
 
@@ -23,67 +22,117 @@
       <h2>🤖 Chatbot Du lịch</h2>
     </div>
     <div class="chat-body" id="chat-body">
-      {% if user_input %}
+      {% for user, bot in history %}
         <div class="message-wrapper">
           <div class="message user-message">
-            <span>{{ user_input }}</span>
+            <span>{{ user | safe }}</span>
           </div>
         </div>
-      {% endif %}
-      {% if bot_response %}
         <div class="message-wrapper">
           <div class="message bot-message">
-            <span style="white-space: pre-wrap;">{{ bot_response }}</span>
+            <span style="white-space: pre-wrap;">{{ bot | safe }}</span>
           </div>
         </div>
-      {% endif %}
+      {% endfor %}
       <div class="loading" id="loading" style="display: none;">
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
       </div>
     </div>
-    <form class="chat-footer" method="POST" id="chat-form">
+    <form class="chat-footer" id="chat-form">
       <textarea name="input" placeholder="Nhập câu hỏi về du lịch tại đây..."></textarea>
-      <button type="submit">Gửi</button>
+      <button type="button" onclick="sendMessage()">Gửi</button>
     </form>
+    <div style="padding: 10px;">
+      <button onclick="saveSession()">Lưu phiên</button>
+      <a href="{{ url_for('history') }}">Xem lịch sử</a>
+    </div>
   </div>
-
+  <a href="{{ url_for('history') }}">Lịch sử chatbot</a>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     const form = document.getElementById('chat-form');
     const textarea = form.querySelector('textarea');
     const loading = document.getElementById('loading');
     const chatBody = document.getElementById('chat-body');
 
-    // Gửi form khi nhấn Enter
+    // Gửi khi nhấn Enter
     textarea.addEventListener('keypress', function(e) {
       if (e.key === 'Enter' && !e.shiftKey) {
         e.preventDefault();
-        form.submit();
+        sendMessage();
       }
     });
 
-    // Hiển thị loading và cuộn xuống khi gửi
-    form.addEventListener('submit', function() {
+    // Gửi tin nhắn bằng AJAX
+    function sendMessage() {
+      const input = textarea.value.trim();
+      if (input) {
+        showLoading();
+        $.post('/chat', { input: input }, function(response) {
+          const messageWrapperUser = document.createElement('div');
+          messageWrapperUser.className = 'message-wrapper';
+          messageWrapperUser.innerHTML = `<div class="message user-message"><span>${input}</span></div>`;
+          chatBody.insertBefore(messageWrapperUser, loading);
+
+          const messageWrapperBot = document.createElement('div');
+          messageWrapperBot.className = 'message-wrapper';
+          messageWrapperBot.innerHTML = `<div class="message bot-message"><span style="white-space: pre-wrap;">${response.bot_response}</span></div>`;
+          chatBody.insertBefore(messageWrapperBot, loading);
+
+          textarea.value = '';
+          hideLoading();
+          scrollToBottom();
+        }).fail(function(xhr, status, error) {
+          hideLoading();
+          alert('Lỗi khi gửi tin nhắn: ' + error);
+          console.log('Error:', status, error);
+        });
+      } else {
+        hideLoading();
+        alert('Vui lòng nhập câu hỏi.');
+      }
+    }
+
+    // Lưu phiên
+    function saveSession() {
+      const messages = Array.from(chatBody.children).filter(child => child.className === 'message-wrapper');
+      const userInputs = messages.filter(m => m.querySelector('.user-message')).map(m => m.querySelector('.user-message span').textContent);
+      const botResponses = messages.filter(m => m.querySelector('.bot-message')).map(m => m.querySelector('.bot-message span').textContent);
+
+      $.post('/save_session', {
+        'user_inputs[]': userInputs,
+        'bot_responses[]': botResponses
+      }, function(response) {
+        alert('Phiên đã được lưu với ID: ' + response.session_id);
+      }).fail(function() {
+        alert('Lỗi khi lưu phiên.');
+      });
+    }
+
+    // Hiển thị loading
+    function showLoading() {
       loading.style.display = 'flex';
       textarea.disabled = true;
-      textarea.value = '';
-      textarea.placeholder = 'Đang chờ phản hồi...';
-      scrollToBottom();
-    });
+    }
 
-    // Ẩn loading và cuộn khi tải trang
-    window.addEventListener('load', function() {
+    // Ẩn loading
+    function hideLoading() {
       loading.style.display = 'none';
       textarea.disabled = false;
-      textarea.placeholder = 'Nhập câu hỏi về du lịch tại đây...';
-      scrollToBottom();
-    });
+    }
 
     // Cuộn xuống tin nhắn mới nhất
     function scrollToBottom() {
       chatBody.scrollTop = chatBody.scrollHeight;
     }
+
+    // Ẩn loading và cuộn khi tải trang
+    window.addEventListener('load', function() {
+      hideLoading();
+      scrollToBottom();
+    });
 
     // Toggle menu với hiệu ứng trượt
     function toggleMenu() {

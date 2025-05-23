@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Lịch sử Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">Du lịch Thái Nguyên</div>
+    <ul class="navbar-menu">
+      <li><a href="{{ url_for('index') }}">Trang chủ</a></li>
+      <li><a href="{{ url_for('chat') }}">Chatbot AI</a></li>
+    </ul>
+  </nav>
+  <div style="padding: 20px;">
+    <h2>Lịch sử Chatbot</h2>
+    <a href="{{ url_for('chat') }}">Quay lại Chat</a>
+    <ul>
+      {% for user_input, bot_response, timestamp in history %}
+        <li>
+          <strong>Người dùng:</strong> {{ user_input | safe }}<br>
+          <strong>Bot:</strong> {{ bot_response | safe }}<br>
+          <small>Thời gian: {{ timestamp }}</small>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>

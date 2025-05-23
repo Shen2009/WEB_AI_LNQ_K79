@@ -1,0 +1,21 @@
+<div class="chat-body" id="chat-body" style="display: flex; flex-direction: column-reverse;">
+  {% if bot_response %}
+    <div class="message-wrapper">
+      <div class="message bot-message">
+        <span style="white-space: pre-wrap;">{{ bot_response | safe }}</span>
+      </div>
+    </div>
+  {% endif %}
+  {% if user_input %}
+    <div class="message-wrapper">
+      <div class="message user-message">
+        <span>{{ user_input| safe }}</span>
+      </div>
+    </div>
+  {% endif %}
+  <div class="loading" id="loading" style="display: none;">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>
