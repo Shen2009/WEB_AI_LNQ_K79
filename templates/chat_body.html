@@ -1,0 +1,24 @@
+{% for user_input, bot_response in history %}
+  <div class="message-wrapper">
+    <div class="message user-message">
+      <span>{{ user_input }}</span>
+    </div>
+    <div class="message bot-message">
+      <span style="white-space: pre-wrap;">{{ bot_response | safe }}</span>
+    </div>
+  </div>
+{% endfor %}
+{% if user_input %}
+  <div class="message-wrapper">
+    <div class="message user-message">
+      <span>{{ user_input }}</span>
+    </div>
+  </div>
+{% endif %}
+{% if bot_response %}
+  <div class="message-wrapper">
+    <div class="message bot-message">
+      <span style="white-space: pre-wrap;">{{ bot_response | safe }}</span>
+    </div>
+  </div>
+{% endif %}
