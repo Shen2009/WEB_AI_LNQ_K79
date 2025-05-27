@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff;
+  background-color: #f0f2f5;
   margin: 0;
   padding: 0;
   display: flex;
@@ -11,15 +11,23 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+body.home-page {
+  background-image: url('hinh_nen.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Thanh menu */
 .navbar {
-  background: linear-gradient(90deg, #28a745, #42d77d); /* Gradient màu */
+  background: linear-gradient(90deg, #28a745, #42d77d);
   padding: 15px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
+  z-index: 1002;
   transition: background 0.5s ease;
 }
 
@@ -43,16 +51,16 @@ body {
   background-color: #42d77d;
   flex-direction: row;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  width: 100%;
+  z-index: 1001;
 }
 
 .navbar-menu li {
   margin: 0 5px;
-  border-right: 2px solid #fff; /* Thêm đường viền ngăn cách */
+  border-right: 2px solid #fff;
 }
 
 .navbar-menu li:last-child {
-  border-right: none; /* Loại bỏ viền bên phải của ô cuối */
+  border-right: none;
 }
 
 .navbar-menu a {
@@ -62,14 +70,50 @@ body {
   padding: 10px 20px;
   display: block;
   border-radius: 5px;
-  transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+  transition: all 0.3s ease;
 }
 
 .navbar-menu a:hover,
 .navbar-menu a.active {
   background-color: #33b26a;
-  transform: translateY(-2px); /* Nhấc nhẹ lên khi hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Nút hamburger */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8em;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 1002;
+}
+
+/* Nút chuyển đổi chế độ */
+.theme-toggle {
+  position: absolute;
+  top: 15px;
+  right: 60px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s, transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: #ddd;
+}
+
+.theme-toggle:active {
+  transform: rotate(360deg);
 }
 
 /* Responsive menu */
@@ -87,6 +131,7 @@ body {
     right: 0;
     background-color: #42d77d;
     text-align: center;
+    z-index: 1001;
   }
 
   .navbar-menu.active {
@@ -95,8 +140,8 @@ body {
 
   .navbar-menu li {
     margin: 5px 0;
-    border-right: none; /* Loại bỏ viền khi thả xuống */
-    border-bottom: 2px solid #fff; /* Thêm viền dưới cho từng ô */
+    border-right: none;
+    border-bottom: 2px solid #fff;
   }
 
   .navbar-menu li:last-child {
@@ -105,14 +150,6 @@ body {
 
   .hamburger {
     display: block;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.8em;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 15px;
   }
 }
 
@@ -126,37 +163,11 @@ body {
   .navbar-menu-container {
     margin-top: 5px;
   }
-
-  .hamburger {
-    display: none;
-  }
-}
-
-/* Nút chuyển đổi chế độ */
-.theme-toggle {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.5em;
-  cursor: pointer;
-  padding: 5px;
-  transition: color 0.3s, transform 0.3s ease; /* Thêm transition cho xoay */
-}
-
-.theme-toggle:hover {
-  color: #ddd;
-}
-
-.theme-toggle:active {
-  transform: rotate(360deg); /* Hiệu ứng xoay khi nhấn */
 }
 
 /* Biểu tượng chatbot */
 .chatbot-icon {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   width: 50px;
@@ -166,12 +177,12 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   cursor: move;
   overflow: hidden;
-  z-index: 1001;
+  z-index: 1003;
   transition: transform 0.3s ease;
 }
 
 .chatbot-icon:hover {
-  animation: bounce 0.5s; /* Hiệu ứng nảy */
+  animation: bounce 0.5s;
 }
 
 @keyframes bounce {
@@ -185,9 +196,9 @@ body {
   object-fit: cover;
 }
 
-/* Khung chat popup */
+/* Khung chat */
 .chat-container {
-  position: absolute;
+  position: fixed;
   width: 400px;
   min-height: 400px;
   max-height: 600px;
@@ -200,15 +211,29 @@ body {
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, box-shadow 0.3s ease; /* Thêm transition cho bóng đổ */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, box-shadow 0.3s ease;
   transform: translateY(20px);
 }
 
 .chat-container.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.chat-container.full-page {
+  width: 90vw;
+  max-width: 1200px;
+  height: 80vh;
+  margin: 20px auto;
+  position: static;
+  background-color: #d3d3d3;
+  display: flex;
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng đổ lớn hơn khi mở */
+  transform: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .chat-header {
@@ -256,6 +281,12 @@ body {
   flex-direction: column;
   scrollbar-width: thin;
   scrollbar-color: #b0b0b0 #d3d3d3;
+}
+
+.chat-container.full-page .chat-body {
+  background-color: #d3d3d3;
+  max-height: none;
+  padding: 20px;
 }
 
 .chat-body::-webkit-scrollbar {
@@ -338,6 +369,11 @@ body {
   align-items: center;
 }
 
+.chat-container.full-page .chat-footer {
+  background-color: #d3d3d3;
+  border-top: 1px solid #dfe1e5;
+}
+
 .chat-footer textarea {
   flex: 1;
   border: 1px solid #444;
@@ -350,6 +386,7 @@ body {
   color: #000;
   height: 50px;
   line-height: 1.2;
+  transition: border-color 0.3s;
 }
 
 .chat-footer textarea:focus {
@@ -369,7 +406,7 @@ body {
   padding: 8px 15px;
   margin-left: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s ease; /* Thêm transition cho scale */
+  transition: background-color 0.3s, transform 0.2s ease;
   font-size: 1em;
   height: 50px;
 }
@@ -379,7 +416,7 @@ body {
 }
 
 .chat-footer button:active {
-  transform: scale(0.95); /* Hiệu ứng scale khi nhấn */
+  transform: scale(0.95);
 }
 
 /* Hiệu ứng loading */
@@ -390,12 +427,12 @@ body {
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: #28a745;
   border-radius: 50%;
   margin: 0 4px;
-  animation: bounce 0.6s infinite alternate, pulse 1.2s infinite; /* Kết hợp bounce và pulse */
+  animation: bounce 0.6s infinite alternate, pulse 1.2s infinite;
 }
 
 .dot:nth-child(2) {
@@ -408,7 +445,7 @@ body {
 
 @keyframes bounce {
   to {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
   }
 }
 
@@ -418,22 +455,57 @@ body {
   100% { transform: scale(1); }
 }
 
-/* Responsive khung chat */
-@media (max-width: 768px) {
-  .chat-container {
-    width: 90%;
-  }
-
-  .chatbot-icon {
-    bottom: 10px;
-    right: 10px;
-  }
+/* Trang lịch sử */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-height: 500px) {
-  .chat-container {
-    max-height: 80vh;
-  }
+.history {
+  margin-top: 20px;
+}
+
+.clear-history-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.clear-history-btn:hover {
+  background-color: #c82333;
+}
+
+/* Button link */
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.3s;
+  margin: 20px auto;
+  text-align: center;
+  display: block;
+  max-width: 200px;
+}
+
+.button-link:hover {
+  background-color: #218838;
+}
+
+.button-link:active {
+  transform: scale(0.95);
 }
 
 /* Dark mode */
@@ -443,7 +515,7 @@ body.dark-mode {
 }
 
 body.dark-mode .navbar {
-  background: linear-gradient(90deg, #1a5e2e, #2a8c50); /* Gradient tối cho dark mode */
+  background: linear-gradient(90deg, #1a5e2e, #2a8c50);
 }
 
 body.dark-mode .navbar-brand {
@@ -451,7 +523,7 @@ body.dark-mode .navbar-brand {
 }
 
 body.dark-mode .navbar-menu {
-  background-color: #2a8c50; /* Tương đồng với #42d77d trong dark mode */
+  background-color: #2a8c50;
 }
 
 body.dark-mode .navbar-menu a {
@@ -462,6 +534,10 @@ body.dark-mode .navbar-menu a:hover {
   background-color: #218838;
 }
 
+body.dark-mode .hamburger {
+  color: #f5f5f5;
+}
+
 body.dark-mode .theme-toggle {
   color: #f5f5f5;
 }
@@ -470,10 +546,19 @@ body.dark-mode .chat-container {
   background-color: #2c2c2c;
 }
 
+body.dark-mode .chat-container.full-page {
+  background-color: #2c2c2c;
+}
+
 body.dark-mode .chat-footer textarea,
 body.dark-mode .chat-body {
   background-color: #3a3a3a;
   color: #fff;
+}
+
+body.dark-mode .chat-container.full-page .chat-body,
+body.dark-mode .chat-container.full-page .chat-footer {
+  background-color: #3a3a3a;
 }
 
 body.dark-mode .chat-footer textarea:focus {
@@ -492,20 +577,45 @@ body.dark-mode .loading .dot {
   background-color: #1a5e2e;
 }
 
-.button-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: transform 0.2s, background-color 0.3s;
+body.dark-mode .container {
+  background-color: #2c2c2c;
 }
 
-.button-link:hover {
-    background-color: #28a745;
+body.dark-mode .clear-history-btn {
+  background-color: #a71d2a;
 }
 
-.button-link:active {
-    transform: scale(0.95);
+body.dark-mode .clear-history-btn:hover {
+  background-color: #911823;
+}
+
+body.dark-mode .button-link {
+  background-color: #1a5e2e;
+}
+
+body.dark-mode .button-link:hover {
+  background-color: #14522a;
+}
+
+/* Responsive khung chat */
+@media (max-width: 768px) {
+  .chat-container {
+    width: 90%;
+  }
+
+  .chat-container.full-page {
+    margin: 10px;
+    height: 70vh;
+  }
+
+  .chatbot-icon {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-height: 500px) {
+  .chat-container {
+    max-height: 80vh;
+  }
 }
