@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Lịch sử hội thoại</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Thanh menu -->
+  <nav class="navbar">
+    <div class="navbar-brand">Du lịch Thái Nguyên</div>
+    <div class="navbar-menu-container">
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="{{ url_for('index') }}">Trang chủ</a></li>
+        <li><a href="{{ url_for('itinerary') }}">Hành trình</a></li>
+        <li><a href="{{ url_for('index')}}#dia-diem-noi-bat">Địa điểm nổi bật</a></li>
+        <li><a href="{{ url_for('chat') }}">Chatbot AI</a></li>
+        <li><a href="{{ url_for('history') }}" class="active">Lịch sử Chat Bot</a></li>
+      </ul>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+
+  <!-- Khung chat popup -->
+  <div class="chat-container" id="chat-container">
+    <div class="chat-header">
+      <h2><a href="{{ url_for('chat') }}" class="button-link">🤖Chatbot🤖</a></h2>
+      <div>
+        <span class="minimize-btn" onclick="minimizeChat()">-</span>
+        <span class="close-btn" onclick="clearAndCloseChat()">×</span>
+      </div>
+    </div>
+    <div class="chat-body" id="chat-body">
+      {% for user_input, bot_response, timestamp in history %}
+        <div class="message-wrapper">
+          <div class="message user-message">
+            <span>🗣 {{ user_input }}</span>
+          </div>
+          <div class="datetime">{{ timestamp }}</div>
+          <div class="message bot-message">
+            <span style="white-space: pre-wrap;">🤖 {{ bot_response | safe }}</span>
+          </div>
+          <div class="datetime">{{ timestamp }}</div>
+        </div>
+      {% endfor %}
+      <div class="loading" id="loading" style="display: none;">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    <form class="chat-footer" id="chat-form">
+      <textarea name="input" placeholder="Nhập câu hỏi về du lịch tại đây..."></textarea>
+      <button type="button" onclick="sendMessage()">Gửi</button>
+    </form>
+  </div>
+
+  <!-- Nội dung chính -->
+  <div class="container">
+    <h2>Lịch sử hội thoại với Chatbot</h2>
+    <div class="search-filter">
+      <input type="text" id="search-input" placeholder="Tìm kiếm theo từ khóa...">
+      <input type="date" id="date-filter" placeholder="Chọn ngày">
+      <button onclick="filterHistory()">Lọc</button>
+    </div>
+    <button class="clear-history-btn" onclick="clearHistory()">Xóa lịch sử</button>
+    <div class="history" id="history-content">
+      {% if history %}
+        {% for user_input, bot_response, timestamp in history %}
+          <div class="message-wrapper">
+            <div class="message user-message">
+              <span>🗣 {{ user_input }}</span>
+            </div>
+            <div class="datetime">{{ timestamp }}</div>
+            <div class="message bot-message">
+              <span style="white-space: pre-wrap;">🤖 {{ bot_response | safe }}</span>
+            </div>
+            <div class="datetime">{{ timestamp }}</div>
+          </div>
+          <hr>
+        {% endfor %}
+      {% else %}
+        <p>Chưa có lịch sử trò chuyện.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="{{ url_for('static', filename='js/history.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
