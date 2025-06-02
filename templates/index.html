@@ -3,26 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <title>Du lịch Thái Nguyên</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="home-page">
-  <!-- Thanh menu -->
+<body>
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar-brand">Du lịch Thái Nguyên</div>
+    <div class="navbar-menu-container">
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="{{ url_for('index') }}" class="active">Trang chủ</a></li>
+        <li><a href="{{ url_for('index')}}#dia-diem-noi-bat">Địa điểm nổi bật</a></li>
+        <li><a href="{{ url_for('itinerary') }}">Hành trình</a></li>
+        <li><a href="{{ url_for('chat') }}">Chatbot AI</a></li>
+        <li><a href="{{ url_for('history') }}">Lịch sử Chat Bot</a></li>
+        <li><a href="{{ url_for('contact') }}">Phản hồi</a></li>
+      </ul>
+    </div>
     <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <ul class="navbar-menu" id="navbar-menu">
-      <li><a href="{{ url_for('chat') }}">Chatbot AI</a></li>
-      <li><a href="#">Địa điểm du lịch (Sắp ra mắt)</a></li>
-      <li><a href="#">Lịch trình gợi ý (Sắp ra mắt)</a></li>
-    </ul>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <i class="fas fa-moon"></i>
+    </button>
   </nav>
 
-  <script>
-    // Toggle menu với hiệu ứng trượt
-    function toggleMenu() {
-      const menu = document.getElementById('navbar-menu');
-      menu.classList.toggle('active');
-    }
-  </script>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <a href="#dia-diem-noi-bat" class="btn">Khám phá ngay</a>
+    </div>
+  </section>
+
+  <!-- Địa điểm nổi bật -->
+  <section class="section" id="dia-diem-noi-bat">
+    <h2>🌟 Địa điểm nổi bật</h2>
+    <div class="container">
+      <div class="card-grid">
+
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="{{ url_for('static', filename='image/ho_nui_coc.jpg') }}" alt="Hồ Núi Cốc" loading="lazy">
+            <a href="https://vi.wikipedia.org/wiki/Hồ_Núi_Cốc" target="_blank" class="btn-overlay">Trải nghiệm</a>
+          </div>
+          <div class="card-content">
+            <h3>Hồ Núi Cốc</h3>
+            <p>Danh thắng nổi tiếng với cảnh quan hữu tình, truyền thuyết tình yêu cảm động và nhiều ho ạt động như chèo thuyền, khám phá đảo.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="{{ url_for('static', filename='image/atk_dinh_hoa.jpg') }}" alt="ATK Định Hóa" loading="lazy">
+            <a href="https://vi.wikipedia.org/wiki/An_toàn_khu" target="_blank" class="btn-overlay">Trải nghiệm</a>
+          </div>
+          <div class="card-content">
+            <h3>ATK Định Hóa</h3>
+            <p>Di tích Quốc gia đặc biệt – trung tâm kháng chiến của Chủ tịch Hồ Chí Minh và Trung ương Đảng trong kháng chiến chống Pháp.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="{{ url_for('static', filename='image/doi-che-tan-cuong.jpeg') }}" alt="Đồi chè Tân CươngCương" loading="lazy">
+            <a href="https://vi.wikipedia.org/wiki/Tr%C3%A0_T%C3%A2n_C%C6%B0%C6%A1ng" target="_blank" class="btn-overlay">Trải nghiệm</a>
+          </div>
+          <div class="card-content">
+            <h3>Đồi chè Tân Cương</h3>
+            <p>Danh thắng quốc gia nổi bật với hệ thống ba tầng hang động, nhũ đá kỳ ảo và dòng suối Mỏ Gà thơ mộng ở huyện Võ Nhai.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bản đồ Google My Maps -->
+  <section class="section" id="map-section">
+    <h2>🗺 Bản đồ Du lịch Thái Nguyên</h2>
+    <div class="container">
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1G153C50vGjlmcJ8dhsaJnvhaZWw&z=16" width="100%" height="500"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chatbot icon -->
+  <div class="chatbot-icon" id="chatbot-icon">
+    <img src="{{ url_for('static', filename='image/icon.jpg') }}" alt="Chatbot" loading="lazy">
+  </div>
+
+  <!-- Khung chat -->
+  <div class="chat-container" id="chat-container">
+    <div class="chat-header">
+      <h2><a href="{{ url_for('chat') }}" class="button-link">🤖Chatbot🤖</a></h2>
+      <div>
+        <span class="minimize-btn" onclick="minimizeChat()">-</span>
+        <span class="close-btn" onclick="clearAndCloseChat()">×</span>
+      </div>
+    </div>
+    <div class="chat-body" id="chat-body">
+      {% include 'chat_body.html' %}
+      <div class="loading" id="loading" style="display: none;">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      </div>
+    </div>
+    <form class="chat-footer" id="chat-form">
+      <textarea name="input" placeholder="Nhập câu hỏi về du lịch tại đây..."></textarea>
+      <button type="button" onclick="sendMessage()">Gửi</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>

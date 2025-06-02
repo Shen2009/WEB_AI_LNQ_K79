@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hành trình Du lịch Thái Nguyên</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Thanh menu -->
+  <nav class="navbar">
+    <div class="navbar-brand">Du lịch Thái Nguyên</div>
+    <div class="navbar-menu-container">
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="{{ url_for('index') }}">Trang chủ</a></li>
+        <li><a href="{{ url_for('index')}}#dia-diem-noi-bat">Địa điểm nổi bật</a></li>
+        <li><a href="{{ url_for('itinerary') }}" class ='active'>Hành trình</a></li>
+        <li><a href="{{ url_for('chat') }}">Chatbot AI</a></li>
+        <li><a href="{{ url_for('history') }}">Lịch sử Chat Bot</a></li>
+        <li><a href="{{ url_for('contact') }}">Phản hồi</a></li>
+      </ul>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+
+  <!-- Hành trình gợi ý -->
+  <section class="section" id="itinerary-section">
+    <h2>🛤 Tùy chỉnh Hành trình Du lịch</h2>
+    <div class="container">
+      <div class="itinerary-form">
+        <h3>Thiết kế hành trình của bạn</h3>
+        <div class="form-group">
+          <label for="destination">Nơi bạn muốn đi:</label>
+          <select id="destination">
+            <option value="">-- Chọn địa điểm --</option>
+            <option value="Hồ Núi Cốc">Hồ Núi Cốc</option>
+            <option value="ATK Định Hóa">ATK Định Hóa</option>
+            <option value="Hang Phượng Hoàng">Hang Phượng Hoàng</option>
+            <option value="Thác Khuôn Tát">Thác Khuôn Tát</option>
+            <option value="Suối Mỏ Gà">Suối Mỏ Gà</option>
+            <option value="Chùa Hang">Chùa Hang</option>
+            <option value="Đồi chè Tân Cương">Đồi chè Tân Cương</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="activities">Hoạt động & Mục đích:</label>
+          <select id="activities">
+            <option value="">-- Chọn hoạt động --</option>
+            <option value="Chèo thuyền, thư giãn">Chèo thuyền, thư giãn</option>
+            <option value="Khám phá lịch sử, tham quan di tích">Khám phá lịch sử, tham quan di tích</option>
+            <option value="Phiêu lưu, khám phá thiên nhiên">Phiêu lưu, khám phá thiên nhiên</option>
+            <option value="Trải nghiệm văn hóa, ngắm cảnh">Trải nghiệm văn hóa, ngắm cảnh</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="days">Số ngày:</label>
+          <select id="days">
+            <option value="">-- Chọn số ngày --</option>
+            <option value="1">1 ngày</option>
+            <option value="2">2 ngày</option>
+            <option value="3">3 ngày</option>
+            <option value="4">4 ngày</option>
+            <option value="5">5 ngày</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="schedule">Loại lịch trình:</label>
+          <select id="schedule">
+            <option value="short">Lịch ngắn (thư giãn)</option>
+            <option value="dense">Lịch dày (đầy đủ trải nghiệm)</option>
+          </select>
+        </div>
+        <button onclick="generateItinerary()">Tạo hành trình</button>
+      </div>
+      <div id="itinerary-result" class="card-grid"></div>
+      <div class="loading" id="itinerary-loading" style="display: none;">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chatbot icon -->
+  <div class="chatbot-icon" id="chatbot-icon">
+    <img src="{{ url_for('static', filename='image/icon.jpg') }}" alt="Chatbot" loading="lazy">
+  </div>
+
+  <!-- Khung chat -->
+  <div class="chat-container" id="chat-container">
+    <div class="chat-header">
+      <h2><a href="{{ url_for('chat') }}" class="button-link">🤖Chatbot🤖</a></h2>
+      <div>
+        <span class="minimize-btn" onclick="minimizeChat()">-</span>
+        <span class="close-btn" onclick="clearAndCloseChat()">×</span>
+      </div>
+    </div>
+    <div class="chat-body" id="chat-body">
+      {% include 'chat_body.html' %}
+      <div class="loading" id="loading" style="display: none;">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      </div>
+    </div>
+    <form class="chat-footer" id="chat-form">
+      <textarea name="input" placeholder="Nhập câu hỏi về du lịch tại đây..."></textarea>
+      <button type="button" onclick="sendMessage()">Gửi</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    function generateItinerary() {
+      const destination = document.getElementById('destination').value;
+      const activities = document.getElementById('activities').value;
+      const days = document.getElementById('days').value;
+      const schedule = document.getElementById('schedule').value;
+      const resultDiv = document.getElementById('itinerary-result');
+      const loadingDiv = document.getElementById('itinerary-loading');
+
+      if (!destination || !activities || !days) {
+        alert('Vui lòng chọn đầy đủ thông tin!');
+        return;
+      }
+
+      loadingDiv.style.display = 'flex';
+      resultDiv.innerHTML = '';
+
+      const prompt = `Tạo một hành trình du lịch chi tiết tại Thái Nguyên trong ${days} ngày, tập trung vào địa điểm: ${destination}. Hoạt động và mục đích: ${activities}. Loại lịch trình: ${schedule === 'short' ? 'thư giãn, ít hoạt động' : 'dày đặc, nhiều trải nghiệm'}. Đưa ra lịch trình cụ thể cho từng ngày, bao gồm thời gian, địa điểm, và hoạt động chi tiết.`;
+
+      $.post('/generate_itinerary', { prompt: prompt }, function(response) {
+        loadingDiv.style.display = 'none';
+        if (response.status === 'success') {
+          const itinerary = `
+            <div class="card">
+              <div class="card-content">
+                <h3>Hành trình ${days} ngày tại ${destination}</h3>
+                <p>${response.itinerary}</p>
+              </div>
+            </div>
+          `;
+          resultDiv.innerHTML = itinerary;
+        } else {
+          alert('Lỗi khi tạo hành trình: ' + (response.message || 'Vui lòng thử lại.'));
+        }
+      }).fail(function() {
+        loadingDiv.style.display = 'none';
+        alert('Lỗi kết nối server. Vui lòng thử lại.');
+      });
+    }
+  </script>
+</body>
+</html>

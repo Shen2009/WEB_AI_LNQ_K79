@@ -1,0 +1,21 @@
+/* Section layout */
+.section {
+  padding: 60px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.section.dark {
+  background-color: #e9ecef;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Dark Mode Section */
+body.dark-mode .section {
+  background-color: #2c2c2c;
+  color: #000000;
+}
