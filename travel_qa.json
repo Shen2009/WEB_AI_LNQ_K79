@@ -1,0 +1,628 @@
+{
+  "locations": [
+    {
+      "name": "Hồ Núi Cốc",
+      "lat": 21.6896,
+      "lng": 105.6986,
+      "description": "Hồ Núi Cốc là một khu du lịch nổi tiếng ở huyện Đại Từ, cách trung tâm thành phố Thái Nguyên khoảng 15 km về phía Tây. Đây là hồ nước ngọt nhân tạo với diện tích 25 km², bao gồm 89 hòn đảo lớn nhỏ, nổi bật với cảnh quan sơn thủy hữu tình và truyền thuyết về chàng Cốc, nàng Công. Khu du lịch có nhiều hoạt động như chèo thuyền, tham quan động Huyền Thoại, công viên nước, và sân khấu nhạc nước.",
+      "questions": [
+        {
+          "question": "Hồ Núi Cốc ở đâu?",
+          "answer": "Hồ Núi Cốc nằm ở huyện Đại Từ, cách trung tâm thành phố Thái Nguyên khoảng 15 km về phía Tây. Đây là một khu du lịch nổi tiếng với hồ nước ngọt nhân tạo rộng 25 km² và 89 hòn đảo lớn nhỏ."
+        },
+        {
+          "question": "Hồ Núi Cốc có gì thú vị?",
+          "answer": "Hồ Núi Cốc nổi bật với cảnh quan thiên nhiên tuyệt đẹp, gắn liền với truyền thuyết chàng Cốc, nàng Công. Du khách có thể chèo thuyền, tham quan động Huyền Thoại, động Ba Cây Thông, công viên nước, vườn thú, và thưởng thức sân khấu nhạc nước. Đây là điểm đến lý tưởng cho cả gia đình và nhóm bạn."
+        },
+        {
+          "question": "Có hoạt động gì ở Hồ Núi Cốc?",
+          "answer": "Tại Hồ Núi Cốc, bạn có thể tham gia chèo thuyền trên hồ, khám phá các đảo như đảo Cò, đảo Dê, tham quan động Huyền Thoại, động Thế giới Âm phủ, công viên nước, hoặc trải nghiệm các trò chơi mạo hiểm như tàu lượn siêu tốc, đĩa bay."
+        },
+        {
+          "question": "Huyền thoại Hồ Núi Cốc là gì?",
+          "answer": "Huyền thoại Hồ Núi Cốc kể về câu chuyện tình yêu không thành của chàng Cốc và nàng Công. Nàng Công vì chờ đợi mỏi mòn mà hóa thành núi, còn nước mắt chàng Cốc chảy thành sông, tạo nên hồ nước và ngọn núi ngày nay, mang ý nghĩa về tình yêu chung thủy."
+        },
+        {
+          "question": "Làm thế nào để đến Hồ Núi Cốc từ Hà Nội?",
+          "answer": "Từ Hà Nội, bạn có thể đi đến Hồ Núi Cốc (cách Hà Nội khoảng 100 km) bằng xe máy, xe khách hoặc ô tô cá nhân qua Quốc lộ 3. Thời gian di chuyển khoảng 2-3 giờ. Xe khách từ bến xe Mỹ Đình hoặc Giáp Bát có tuyến đi Thái Nguyên, sau đó bạn có thể bắt xe ôm hoặc taxi đến hồ."
+        },
+        {
+          "question": "Giá vé vào Hồ Núi Cốc là bao nhiêu?",
+          "answer": "Giá vé vào cổng Hồ Núi Cốc dao động từ 50.000 đến 100.000 VNĐ/người, tùy thuộc vào thời điểm và loại vé (vé vào cổng hoặc vé trọn gói các khu vui chơi). Bạn nên kiểm tra giá vé cụ thể tại quầy vé hoặc website chính thức của khu du lịch."
+        },
+        {
+          "question": "Thời gian nào đẹp nhất để đến Hồ Núi Cốc?",
+          "answer": "Thời gian lý tưởng để tham quan Hồ Núi Cốc là từ tháng 3 đến tháng 9, khi thời tiết ấm áp, cảnh quan hồ và đảo xanh tươi, phù hợp cho các hoạt động ngoài trời như chèo thuyền và khám phá."
+        },
+        {
+          "question": "Có nơi lưu trú gần Hồ Núi Cốc không?",
+          "answer": "Gần Hồ Núi Cốc có nhiều nhà nghỉ, khách sạn và homestay, từ bình dân đến cao cấp. Một số lựa chọn phổ biến là Khu nghỉ dưỡng Núi Cốc, khách sạn Đại Từ, hoặc các homestay ở khu vực lân cận, phù hợp cho du khách muốn ở lại qua đêm."
+        },
+        {
+          "question": "Hồ Núi Cốc có phù hợp cho trẻ em không?",
+          "answer": "Hồ Núi Cốc rất phù hợp cho trẻ em với các khu vực như công viên nước, vườn thú, và các trò chơi giải trí như tàu lượn, xe điện đụng. Khu du lịch cũng có không gian rộng rãi và an toàn cho gia đình."
+        },
+        {
+          "question": "Có thể tổ chức cắm trại ở Hồ Núi Cốc không?",
+          "answer": "Bạn có thể tổ chức cắm trại ở một số khu vực được phép quanh Hồ Núi Cốc, đặc biệt ở các bãi đất trống gần hồ hoặc trên các đảo nhỏ. Tuy nhiên, cần xin phép ban quản lý khu du lịch và chuẩn bị đầy đủ vật dụng cắm trại."
+        }
+      ]
+    },
+    {
+      "name": "Đồi chè Tân Cương",
+      "lat": 21.583,
+      "lng": 105.8000,
+      "description": "Đồi chè Tân Cương nằm ở các xã Tân Cương, Phúc Xuân, Phúc Trìu, cách trung tâm thành phố Thái Nguyên khoảng 10 km. Với diện tích hơn 1.300 ha, đây là vùng chè đặc sản nổi tiếng với cảnh quan xanh mướt, không khí trong lành, và văn hóa trà độc đáo. Du khách có thể tham quan, chụp ảnh, và trải nghiệm hái chè.",
+      "questions": [
+        {
+          "question": "Đồi chè Tân Cương ở đâu?",
+          "answer": "Đồi chè Tân Cương nằm ở các xã Tân Cương, Phúc Xuân, Phúc Trìu, cách trung tâm thành phố Thái Nguyên khoảng 10 km. Đây là vùng chè đặc sản nổi tiếng với diện tích hơn 1.300 ha."
+        },
+        {
+          "question": "Đồi chè Tân Cương có gì đặc biệt?",
+          "answer": "Đồi chè Tân Cương nổi tiếng với cảnh quan xanh mướt, không khí trong lành, và sản phẩm chè thơm ngon, đặc trưng với vị chát êm, hậu ngọt. Du khách có thể chụp ảnh, tham gia hái chè, tìm hiểu quy trình sản xuất chè, và thưởng thức trà tại các hợp tác xã địa phương."
+        },
+        {
+          "question": "Có thể làm gì ở Đồi chè Tân Cương?",
+          "answer": "Tại Đồi chè Tân Cương, bạn có thể đi dạo giữa các đồi chè xanh mướt, chụp ảnh check-in, tham gia trải nghiệm hái chè cùng người dân địa phương, và thưởng thức các loại trà đặc sản như trà xanh, trà ô long tại các cơ sở sản xuất chè."
+        },
+        {
+          "question": "Thời điểm nào đẹp nhất để tham quan Đồi chè Tân Cương?",
+          "answer": "Thời điểm đẹp nhất để tham quan Đồi chè Tân Cương là từ tháng 3 đến tháng 9, khi chè đang vào mùa xanh tốt, thời tiết mát mẻ, phù hợp cho các hoạt động ngoài trời như chụp ảnh và dã ngoại."
+        },
+        {
+          "question": "Mua chè Tân Cương ở đâu chính gốc?",
+          "answer": "Bạn có thể mua chè Tân Cương chính gốc tại các hợp tác xã hoặc cơ sở sản xuất chè ở xã Tân Cương, như Liên hiệp Hợp tác xã Du lịch cộng đồng Tân Cương. Hãy chọn các cửa hàng uy tín để đảm bảo chất lượng."
+        },
+        {
+          "question": "Có cần vé vào Đồi chè Tân Cương không?",
+          "answer": "Đồi chè Tân Cương thường không thu vé vào cửa. Du khách có thể tự do tham quan và chụp ảnh. Tuy nhiên, nếu tham gia trải nghiệm hái chè hoặc các tour hướng dẫn, có thể cần trả phí nhỏ cho các hợp tác xã hoặc hướng dẫn viên."
+        },
+        {
+          "question": "Làm sao để đến Đồi chè Tân Cương từ thành phố Thái Nguyên?",
+          "answer": "Từ trung tâm thành phố Thái Nguyên, bạn có thể đi đến Đồi chè Tân Cương bằng xe máy hoặc ô tô, mất khoảng 20-30 phút qua đường tỉnh lộ 261. Đường đi khá dễ dàng, có biển chỉ dẫn rõ ràng."
+        },
+        {
+          "question": "Đồi chè Tân Cương có gì cho trẻ em?",
+          "answer": "Đồi chè Tân Cương phù hợp cho trẻ em với không gian xanh mát, an toàn để chạy nhảy và chụp ảnh. Một số hợp tác xã còn tổ chức các hoạt động giáo dục như tìm hiểu cách làm chè, rất thú vị cho trẻ."
+        },
+        {
+          "question": "Có quán ăn gần Đồi chè Tân Cương không?",
+          "answer": "Gần Đồi chè Tân Cương có một số quán ăn và nhà hàng phục vụ đặc sản địa phương như gà đồi, cá suối, và các món ăn dân dã. Bạn cũng có thể thưởng thức trà và bánh ngọt tại các cơ sở chè."
+        },
+        {
+          "question": "Đồi chè Tân Cương có tổ chức lễ hội gì không?",
+          "answer": "Lễ hội Trà Tân Cương thường được tổ chức vào tháng 10 hàng năm, với các hoạt động như thi hái chè, thi pha trà, và biểu diễn văn hóa dân tộc. Đây là dịp lý tưởng để trải nghiệm văn hóa trà Thái Nguyên."
+        }
+      ]
+    },
+    {
+      "name": "ATK Định Hóa",
+      "lat": 21.9000,
+      "lng": 105.5833,
+      "description": "An Toàn Khu (ATK) Định Hóa là khu di tích lịch sử Quốc gia đặc biệt, nằm trên các xã Phú Đình, Điềm Mặc, Thanh Định, huyện Định Hóa. Đây là căn cứ địa Việt Bắc, nơi Chủ tịch Hồ Chí Minh và Trung ương Đảng đặt đại bản doanh trong kháng chiến chống Pháp (1946-1954). Các di tích nổi bật bao gồm Lán Tỉn Keo, Đồi Khau Tý, và Nhà trưng bày ATK.",
+      "questions": [
+        {
+          "question": "ATK Định Hóa nằm ở đâu?",
+          "answer": "ATK Định Hóa nằm ở huyện Định Hóa, tỉnh Thái Nguyên, trên các xã như Phú Đình, Điềm Mặc, Thanh Định. Đây là khu di tích lịch sử Quốc gia đặc biệt, từng là căn cứ địa Việt Bắc trong kháng chiến chống Pháp."
+        },
+        {
+          "question": "ATK Định Hóa có ý nghĩa lịch sử gì?",
+          "answer": "ATK Định Hóa là căn cứ địa Việt Bắc, nơi Chủ tịch Hồ Chí Minh và Trung ương Đảng đặt đại bản doanh từ năm 1946-1954, lãnh đạo cuộc kháng chiến chống Pháp. Tại đây, nhiều quyết định quan trọng như Chiến dịch Biên giới 1950 và Chiến dịch Điện Biên Phủ được đưa ra."
+        },
+        {
+          "question": "Có thể tham quan gì ở ATK Định Hóa?",
+          "answer": "Tại ATK Định Hóa, bạn có thể tham quan Lán Tỉn Keo (nơi Bác Hồ ở và làm việc), Đồi Khau Tý, Nhà trưng bày ATK, và các di tích khác như hầm làm việc, cây râm bụt do Bác Hồ trồng. Đây là điểm đến ý nghĩa để tìm hiểu lịch sử cách mạng."
+        },
+        {
+          "question": "Lán Tỉn Keo ở ATK Định Hóa là gì?",
+          "answer": "Lán Tỉn Keo là nơi Chủ tịch Hồ Chí Minh ở và làm việc từ năm 1947 tại ATK Định Hóa. Đây là một lán nhỏ, đơn sơ, nằm ở xóm Nà Tra, xã Điềm Mặc, được bảo tồn như một di tích lịch sử quan trọng."
+        },
+        {
+          "question": "Thời gian nào nên đến ATK Định Hóa?",
+          "answer": "Thời gian lý tưởng để tham quan ATK Định Hóa là từ tháng 11 đến tháng 4, khi thời tiết khô ráo, mát mẻ, thuận tiện cho việc di chuyển và khám phá các di tích ngoài trời."
+        },
+        {
+          "question": "Đường đến ATK Định Hóa có dễ đi không?",
+          "answer": "Từ trung tâm Thái Nguyên, bạn có thể đến ATK Định Hóa (khoảng 50 km) bằng xe máy hoặc ô tô qua Quốc lộ 3 và đường tỉnh lộ. Đường đi khá thuận tiện, nhưng một số đoạn đến các di tích như Lán Tỉn Keo cần đi bộ hoặc xe ôm."
+        },
+        {
+          "question": "ATK Định Hóa có thu vé tham quan không?",
+          "answer": "Các di tích ở ATK Định Hóa thường không thu vé tham quan, nhưng Nhà trưng bày ATK có thể thu phí nhỏ (khoảng 10.000-20.000 VNĐ). Bạn nên kiểm tra thông tin cụ thể tại ban quản lý di tích."
+        },
+        {
+          "question": "Có hướng dẫn viên tại ATK Định Hóa không?",
+          "answer": "Tại ATK Định Hóa, bạn có thể thuê hướng dẫn viên tại Nhà trưng bày ATK hoặc liên hệ ban quản lý di tích để được hướng dẫn chi tiết về lịch sử và các địa điểm tham quan."
+        },
+        {
+          "question": "ATK Định Hóa có phù hợp cho học sinh không?",
+          "answer": "ATK Định Hóa rất phù hợp cho học sinh, đặc biệt là các chuyến tham quan học tập về lịch sử. Các di tích như Lán Tỉn Keo và Nhà trưng bày ATK cung cấp thông tin sinh động về kháng chiến chống Pháp."
+        },
+        {
+          "question": "Có sự kiện gì đặc biệt ở ATK Định Hóa?",
+          "answer": "ATK Định Hóa thường tổ chức các sự kiện kỷ niệm, đặc biệt vào các ngày lễ lớn như 19/8 (Cách mạng Tháng Tám) hoặc 2/9 (Quốc khánh), với các hoạt động triển lãm và tái hiện lịch sử."
+        }
+      ]
+    },
+    {
+      "name": "Hang Phượng Hoàng - Suối Mỏ Gà",
+      "lat": 21.7167,
+      "lng": 105.6667,
+      "description": "Hang Phượng Hoàng và Suối Mỏ Gà là quần thể danh thắng ở huyện Võ Nhai, cách thành phố Thái Nguyên khoảng 45 km. Hang Phượng Hoàng gồm ba tầng (hang Dơi, hang Sáng, hang Tối) với nhũ đá lung linh và khung cảnh hùng vĩ. Suối Mỏ Gà chảy dưới chân núi, tạo nên cảnh quan thơ mộng, lý tưởng để nghỉ ngơi sau khi khám phá hang.",
+      "questions": [
+        {
+          "question": "Hang Phượng Hoàng ở đâu?",
+          "answer": "Hang Phượng Hoàng nằm ở huyện Võ Nhai, cách thành phố Thái Nguyên khoảng 45 km. Đây là một danh thắng nổi tiếng với ba tầng hang động và suối Mỏ Gà thơ mộng dưới chân núi."
+        },
+        {
+          "question": "Hang Phượng Hoàng có gì đặc biệt?",
+          "answer": "Hang Phượng Hoàng có ba tầng (hang Dơi, hang Sáng, hang Tối) với các nhũ đá lung linh, tạo nên khung cảnh huyền ảo. Từ cửa hang, du khách có thể ngắm toàn cảnh vùng đất rộng lớn. Suối Mỏ Gà dưới chân núi là nơi lý tưởng để nghỉ ngơi và thư giãn."
+        },
+        {
+          "question": "Có thể làm gì ở Hang Phượng Hoàng - Suối Mỏ Gà?",
+          "answer": "Du khách có thể leo núi để khám phá ba tầng của Hang Phượng Hoàng, chiêm ngưỡng nhũ đá và cảnh quan hùng vĩ. Sau đó, bạn có thể nghỉ ngơi, tắm suối hoặc cắm trại bên dòng suối Mỏ Gà mát lạnh."
+        },
+        {
+          "question": "Đường đến Hang Phượng Hoàng có khó không?",
+          "answer": "Để đến Hang Phượng Hoàng, bạn cần leo khoảng 500 m qua đường đá gồ ghề, nhưng cảnh quan tuyệt đẹp ở cửa hang sẽ bù đắp cho hành trình. Đường đi từ thành phố Thái Nguyên mất khoảng 1-1.5 giờ bằng xe máy hoặc ô tô."
+        },
+        {
+          "question": "Thời điểm nào nên tham quan Hang Phượng Hoàng?",
+          "answer": "Thời điểm tốt nhất để tham quan Hang Phượng Hoàng là từ tháng 11 đến tháng 3, khi thời tiết khô ráo, không trơn trượt, phù hợp để leo núi và khám phá hang động."
+        },
+        {
+          "question": "Hang Phượng Hoàng có nguy hiểm không?",
+          "answer": "Hang Phượng Hoàng không quá nguy hiểm, nhưng bạn cần cẩn thận khi leo núi và khám phá hang, đặc biệt ở các khu vực trơn trượt hoặc tối như hang Tối. Nên đi cùng hướng dẫn viên hoặc nhóm để đảm bảo an toàn."
+        },
+        {
+          "question": "Có thể tắm ở Suối Mỏ Gà không?",
+          "answer": "Suối Mỏ Gà có dòng nước mát và trong, rất phù hợp để tắm và thư giãn sau khi khám phá Hang Phượng Hoàng. Tuy nhiên, nên kiểm tra mực nước và đảm bảo an toàn trước khi tắm."
+        },
+        {
+          "question": "Có chỗ nghỉ chân gần Hang Phượng Hoàng không?",
+          "answer": "Gần Hang Phượng Hoàng có ít khách sạn, nhưng bạn có thể tìm homestay hoặc nhà nghỉ ở thị trấn Võ Nhai, cách hang khoảng 10-15 km. Cắm trại bên Suối Mỏ Gà cũng là lựa chọn phổ biến."
+        },
+        {
+          "question": "Hang Phượng Hoàng có thu phí tham quan không?",
+          "answer": "Hiện tại, Hang Phượng Hoàng không thu phí tham quan, nhưng bạn có thể cần trả phí nhỏ cho hướng dẫn viên hoặc dịch vụ địa phương nếu có. Nên kiểm tra thông tin trước khi đi."
+        },
+        {
+          "question": "Có thể chụp ảnh đẹp ở Hang Phượng Hoàng không?",
+          "answer": "Hang Phượng Hoàng và Suối Mỏ Gà là địa điểm lý tưởng để chụp ảnh với khung cảnh hang động huyền ảo, nhũ đá lung linh, và dòng suối thơ mộng. Đỉnh núi còn có tầm nhìn đẹp để chụp toàn cảnh."
+        }
+      ]
+    },
+    {
+      "name": "Thác Nặm Rứt (Thác Mưa Rơi)",
+      "lat": 21.7500,
+      "lng": 105.6667,
+      "description": "Thác Nặm Rứt, hay còn gọi là Thác Mưa Rơi, nằm ở xã Thần Sa, huyện Võ Nhai, cách trung tâm thành phố Thái Nguyên khoảng 35 km. Thác nổi bật với dòng nước trắng xóa đổ từ vách núi đá vôi, đặc biệt hùng vĩ vào mùa mưa. Đây là điểm đến lý tưởng cho những ai yêu thích thiên nhiên hoang sơ.",
+      "questions": [
+        {
+          "question": "Thác Nặm Rứt ở đâu?",
+          "answer": "Thác Nặm Rứt, hay Thác Mưa Rơi, nằm ở xã Thần Sa, huyện Võ Nhai, cách trung tâm thành phố Thái Nguyên khoảng 35 km, trên tuyến đường từ La Hiên đến khu di tích khảo cổ Thần Sa."
+        },
+        {
+          "question": "Thác Nặm Rứt có gì đặc biệt?",
+          "answer": "Thác Nặm Rứt nổi bật với dòng nước trắng xóa đổ từ vách núi đá vôi, tạo nên khung cảnh hùng vĩ, đặc biệt vào mùa mưa. Vào mùa khô, nước thấm vào đá tạo hiệu ứng lấp lánh dưới ánh nắng, mang lại vẻ đẹp thơ mộng."
+        },
+        {
+          "question": "Có thể làm gì ở Thác Nặm Rứt?",
+          "answer": "Tại Thác Nặm Rứt, bạn có thể ngắm cảnh, chụp ảnh, câu cá bên dòng sông dưới chân thác, hoặc tổ chức picnic giữa thiên nhiên hoang sơ. Vào mùa mưa, thác rất hùng vĩ, phù hợp cho những ai yêu thích khám phá."
+        },
+        {
+          "question": "Thời điểm nào đẹp nhất để đến Thác Nặm Rứt?",
+          "answer": "Thời điểm đẹp nhất để tham quan Thác Nặm Rứt là mùa mưa (từ tháng 6 đến tháng 9), khi thác có dòng nước mạnh, tạo cảnh quan hùng vĩ. Tuy nhiên, vào mùa khô (tháng 11 đến tháng 3), thác mang vẻ đẹp nhẹ nhàng, lấp lánh."
+        },
+        {
+          "question": "Đường đến Thác Nặm Rứt có dễ không?",
+          "answer": "Đường đến Thác Nặm Rứt cách trung tâm Thái Nguyên khoảng 35 km, đi qua đường La Hiên (Quốc lộ 1B). Đường khá dễ đi bằng xe máy hoặc ô tô, nhưng cần cẩn thận vào mùa mưa vì có thể có đoạn trơn trượt."
+        },
+        {
+          "question": "Thác Nặm Rứt có an toàn để tắm không?",
+          "answer": "Tắm ở Thác Nặm Rứt có thể an toàn ở khu vực nước nông gần chân thác, nhưng cần cẩn thận vì đá có thể trơn trượt. Vào mùa mưa, dòng nước mạnh nên không nên tắm để đảm bảo an toàn."
+        },
+        {
+          "question": "Có nơi nghỉ gần Thác Nặm Rứt không?",
+          "answer": "Khu vực Thác Nặm Rứt khá hoang sơ, nên không có nhiều khách sạn gần đó. Bạn có thể nghỉ tại các homestay ở xã Thần Sa hoặc thị trấn Võ Nhai, cách thác khoảng 10-15 km."
+        },
+        {
+          "question": "Thác Nặm Rứt có thu phí không?",
+          "answer": "Thác Nặm Rứt hiện không thu phí tham quan, nhưng nếu có hướng dẫn viên hoặc dịch vụ địa phương, bạn có thể cần trả phí nhỏ. Nên mang theo nước uống và đồ ăn vì khu vực này khá hoang sơ."
+        },
+        {
+          "question": "Có thể cắm trại ở Thác Nặm Rứt không?",
+          "answer": "Bạn có thể cắm trại ở khu vực gần Thác Nặm Rứt, đặc biệt ở các bãi đất bằng phẳng gần sông. Tuy nhiên, cần chuẩn bị đầy đủ lều trại, đồ ăn, và kiểm tra thời tiết để đảm bảo an toàn."
+        },
+        {
+          "question": "Thác Nặm Rứt có gì gần đó để tham quan?",
+          "answer": "Gần Thác Nặm Rứt, bạn có thể kết hợp tham quan khu di tích khảo cổ Thần Sa hoặc Hang Phượng Hoàng - Suối Mỏ Gà, đều nằm ở huyện Võ Nhai, tạo thành một hành trình khám phá thiên nhiên và lịch sử."
+        }
+      ]
+    },
+    {
+      "name": "Đền Đuổm",
+      "lat": 21.6667,
+      "lng": 105.7333,
+      "description": "Đền Đuổm nằm ở xã Động Đạt, huyện Phú Lương, là ngôi đền cổ kính thờ Dương Tự Minh, một vị tướng tài ba thời nhà Lý. Đền có kiến trúc độc đáo với các chạm khắc tinh xảo, là điểm đến tâm linh và lịch sử thu hút du khách.",
+      "questions": [
+        {
+          "question": "Đền Đuổm ở đâu?",
+          "answer": "Đền Đuổm nằm ở xã Động Đạt, huyện Phú Lương, tỉnh Thái Nguyên. Đây là ngôi đền cổ kính, nổi tiếng với kiến trúc độc đáo và giá trị lịch sử."
+        },
+        {
+          "question": "Đền Đuổm thờ ai?",
+          "answer": "Đền Đuổm thờ Dương Tự Minh, một vị tướng tài ba thời nhà Lý, người có công bảo vệ biên cương phía Bắc Đại Việt và giành lại đất đai từ giặc Tống."
+        },
+        {
+          "question": "Có gì đặc biệt ở Đền Đuổm?",
+          "answer": "Đền Đuổm nổi bật với kiến trúc cổ kính, các chạm khắc tinh xảo như lưỡng long chầu nguyệt thời Lê. Nơi đây còn có không gian tâm linh yên bình và khung cảnh thiên nhiên thơ mộng, thu hút du khách đến cầu nguyện và tham quan."
+        },
+        {
+          "question": "Lễ hội Đền Đuổm diễn ra khi nào?",
+          "answer": "Lễ hội Đền Đuổm diễn ra vào ngày 12 tháng Giêng âm lịch hàng năm, thu hút đông đảo du khách và người dân địa phương với các hoạt động như múa sư tử, kéo co, và các trò chơi dân gian."
+        },
+        {
+          "question": "Có thể làm gì khi đến Đền Đuổm?",
+          "answer": "Tại Đền Đuổm, bạn có thể dâng hương, cầu bình an, chiêm ngưỡng kiến trúc cổ với các chạm khắc tinh xảo, và khám phá khung cảnh thiên nhiên xung quanh. Vào dịp lễ hội, bạn có thể tham gia các hoạt động văn hóa truyền thống."
+        },
+        {
+          "question": "Đền Đuổm có thu phí tham quan không?",
+          "answer": "Đền Đuổm không thu phí tham quan, nhưng bạn có thể đóng góp tự nguyện để bảo trì đền. Trong lễ hội, có thể cần chi phí cho các hoạt động hoặc dịch vụ đi kèm."
+        },
+        {
+          "question": "Làm sao để đến Đền Đuổm từ Thái Nguyên?",
+          "answer": "Từ trung tâm Thái Nguyên, bạn có thể đến Đền Đuổm (khoảng 20 km) bằng xe máy hoặc ô tô qua đường tỉnh lộ 266. Đường đi dễ dàng, mất khoảng 30-40 phút."
+        },
+        {
+          "question": "Đền Đuổm có phù hợp cho người cao tuổi không?",
+          "answer": "Đền Đuổm rất phù hợp cho người cao tuổi vì khu vực đền bằng phẳng, dễ di chuyển. Không gian yên tĩnh và tâm linh cũng tạo cảm giác thư giãn cho du khách lớn tuổi."
+        },
+        {
+          "question": "Có quán ăn gần Đền Đuổm không?",
+          "answer": "Gần Đền Đuổm có một số quán ăn nhỏ phục vụ các món ăn dân dã như gà đồi, xôi nếp, và bánh chưng. Vào dịp lễ hội, có thêm nhiều quầy hàng ăn uống phục vụ du khách."
+        },
+        {
+          "question": "Đền Đuổm có tổ chức hoạt động gì đặc biệt?",
+          "answer": "Ngoài lễ hội ngày 12 tháng Giêng, Đền Đuổm thỉnh thoảng tổ chức các sự kiện văn hóa như biểu diễn hát then, hát chầu văn, hoặc triển lãm về lịch sử và văn hóa Thái Nguyên."
+        }
+      ]
+    },
+    {
+      "name": "Hồ Ghềnh Chè",
+      "lat": 21.6167,
+      "lng": 105.7833,
+      "description": "Hồ Ghềnh Chè nằm ở xã Bình Sơn, thành phố Sông Công, cách trung tâm Thái Nguyên khoảng 20 km. Với diện tích 40 ha, hồ được bao quanh bởi rừng bạch đàn, là điểm đến lý tưởng cho các hoạt động dã ngoại, câu cá, và chèo thuyền.",
+      "questions": [
+        {
+          "question": "Hồ Ghềnh Chè ở đâu?",
+          "answer": "Hồ Ghềnh Chè nằm ở xã Bình Sơn, thành phố Sông Công, cách trung tâm thành phố Thái Nguyên khoảng 20 km. Đây là một hồ thủy lợi với cảnh quan thiên nhiên tuyệt đẹp."
+        },
+        {
+          "question": "Hồ Ghềnh Chè có gì hấp dẫn?",
+          "answer": "Hồ Ghềnh Chè có diện tích 40 ha, được bao quanh bởi rừng bạch đàn xanh mát, tạo nên không gian yên bình, trong lành. Đây là điểm đến lý tưởng cho các hoạt động dã ngoại, câu cá, và chèo thuyền."
+        },
+        {
+          "question": "Có thể làm gì ở Hồ Ghềnh Chè?",
+          "answer": "Tại Hồ Ghềnh Chè, bạn có thể tổ chức picnic, cắm trại, câu cá, chèo thuyền, hoặc chụp ảnh check-in giữa khung cảnh thiên nhiên với 45 bán đảo nhỏ trong lòng hồ."
+        },
+        {
+          "question": "Thời điểm nào nên đến Hồ Ghềnh Chè?",
+          "answer": "Thời điểm tốt nhất để đến Hồ Ghềnh Chè là từ tháng 3 đến tháng 9, khi thời tiết ấm áp, cảnh quan xanh tươi, phù hợp cho các hoạt động ngoài trời như cắm trại và chèo thuyền."
+        },
+        {
+          "question": "Hồ Ghềnh Chè có gần các điểm du lịch nào khác không?",
+          "answer": "Hồ Ghềnh Chè nằm gần trung tâm thành phố Sông Công và không xa thành phố Thái Nguyên, thuận tiện kết hợp tham quan Đồi chè Tân Cương hoặc Hồ Núi Cốc trong cùng chuyến đi."
+        },
+        {
+          "question": "Hồ Ghềnh Chè có thu phí không?",
+          "answer": "Hồ Ghềnh Chè hiện không thu phí tham quan, nhưng nếu bạn thuê thuyền hoặc sử dụng dịch vụ cắm trại, có thể cần trả phí nhỏ cho người dân địa phương."
+        },
+        {
+          "question": "Có thể câu cá ở Hồ Ghềnh Chè không?",
+          "answer": "Hồ Ghềnh Chè là điểm đến lý tưởng để câu cá với nhiều loại cá tự nhiên như cá chép, cá rô. Bạn nên mang theo cần câu và kiểm tra quy định của địa phương trước khi câu."
+        },
+        {
+          "question": "Đường đến Hồ Ghềnh Chè có dễ không?",
+          "answer": "Từ trung tâm Thái Nguyên, bạn có thể đến Hồ Ghềnh Chè (khoảng 20 km) bằng xe máy hoặc ô tô qua đường tỉnh lộ 261. Đường đi khá dễ, phù hợp cho mọi loại phương tiện."
+        },
+        {
+          "question": "Hồ Ghềnh Chè có chỗ nghỉ chân không?",
+          "answer": "Khu vực Hồ Ghềnh Chè có một số homestay và nhà nghỉ ở xã Bình Sơn hoặc thành phố Sông Công. Cắm trại bên hồ cũng là lựa chọn phổ biến cho du khách."
+        },
+        {
+          "question": "Hồ Ghềnh Chè có phù hợp cho nhóm bạn không?",
+          "answer": "Hồ Ghềnh Chè rất phù hợp cho nhóm bạn với không gian rộng rãi, lý tưởng để tổ chức cắm trại, tiệc BBQ, chèo thuyền, và các hoạt động dã ngoại vui vẻ."
+        }
+      ]
+    },
+    {
+      "name": "Thác Khuôn Tát",
+      "lat": 21.7500,
+      "lng": 105.6667,
+      "description": "Thác Khuôn Tát nằm ở xã Khe Mo, huyện Đồng Hỷ, cách trung tâm thành phố Thái Nguyên khoảng 30 km. Thác có dòng nước chảy từ độ cao hơn 20 m, tạo nên khung cảnh hùng vĩ giữa rừng núi. Đây là điểm đến lý tưởng cho những ai yêu thích thiên nhiên và muốn khám phá vẻ đẹp hoang sơ.",
+      "questions": [
+        {
+          "question": "Thác Khuôn Tát ở đâu?",
+          "answer": "Thác Khuôn Tát nằm ở xã Khe Mo, huyện Đồng Hỷ, cách trung tâm thành phố Thái Nguyên khoảng 30 km. Đây là một thác nước hùng vĩ giữa rừng núi hoang sơ."
+        },
+        {
+          "question": "Thác Khuôn Tát có gì đặc biệt?",
+          "answer": "Thác Khuôn Tát nổi bật với dòng nước chảy từ độ cao hơn 20 m, tạo nên khung cảnh hùng vĩ. Xung quanh thác là rừng cây xanh mát, mang lại không khí trong lành và vẻ đẹp tự nhiên, lý tưởng cho những ai yêu thích khám phá."
+        },
+        {
+          "question": "Có thể làm gì ở Thác Khuôn Tát?",
+          "answer": "Tại Thác Khuôn Tát, bạn có thể ngắm cảnh, chụp ảnh, tắm ở khu vực nước nông dưới chân thác, hoặc tổ chức picnic. Khu vực xung quanh cũng phù hợp để đi bộ khám phá rừng."
+        },
+        {
+          "question": "Thời điểm nào đẹp nhất để đến Thác Khuôn Tát?",
+          "answer": "Thời điểm lý tưởng để tham quan Thác Khuôn Tát là mùa mưa (tháng 6 đến tháng 9), khi thác có dòng nước mạnh và cảnh quan hùng vĩ. Mùa khô (tháng 11 đến tháng 3) cũng đẹp với dòng nước nhẹ nhàng hơn."
+        },
+        {
+          "question": "Đường đến Thác Khuôn Tát có dễ không?",
+          "answer": "Đường đến Thác Khuôn Tát cách trung tâm Thái Nguyên khoảng 30 km, đi qua Quốc lộ 1B và đường xã Khe Mo. Đường đi bằng xe máy hoặc ô tô khá thuận tiện, nhưng cần cẩn thận ở một số đoạn đường đất vào mùa mưa."
+        },
+        {
+          "question": "Thác Khuôn Tát có an toàn để tắm không?",
+          "answer": "Tắm ở Thác Khuôn Tát có thể an toàn ở khu vực nước nông dưới chân thác, nhưng cần cẩn thận vì đá trơn trượt. Vào mùa mưa, dòng nước mạnh nên không nên tắm để đảm bảo an toàn."
+        },
+        {
+          "question": "Có nơi nghỉ gần Thác Khuôn Tát không?",
+          "answer": "Thác Khuôn Tát khá hoang sơ, nên không có nhiều khách sạn gần đó. Bạn có thể nghỉ tại các homestay ở huyện Đồng Hỷ hoặc quay về thành phố Thái Nguyên, cách khoảng 30 km."
+        },
+        {
+          "question": "Thác Khuôn Tát có thu phí tham quan không?",
+          "answer": "Hiện tại, Thác Khuôn Tát không thu phí tham quan. Tuy nhiên, nếu có hướng dẫn viên hoặc dịch vụ địa phương, bạn có thể cần trả phí nhỏ."
+        },
+        {
+          "question": "Có thể cắm trại ở Thác Khuôn Tát không?",
+          "answer": "Bạn có thể cắm trại gần Thác Khuôn Tát ở các bãi đất bằng phẳng xung quanh. Cần chuẩn bị lều trại, đồ ăn, và kiểm tra thời tiết để đảm bảo an toàn."
+        },
+        {
+          "question": "Thác Khuôn Tát có gì gần đó để tham quan?",
+          "answer": "Gần Thác Khuôn Tát, bạn có thể kết hợp tham quan các điểm như Động Linh Sơn hoặc các làng bản dân tộc ở huyện Đồng Hỷ, mang lại trải nghiệm văn hóa và thiên nhiên độc đáo."
+        }
+      ]
+    },
+    {
+      "name": "Động Linh Sơn",
+      "lat": 21.6667,
+      "lng": 105.8333,
+      "description": "Động Linh Sơn nằm ở xã Linh Sơn, huyện Đồng Hỷ, cách trung tâm Thái Nguyên khoảng 25 km. Đây là một hang động đá vôi với nhiều nhũ đá tự nhiên độc đáo, mang vẻ đẹp huyền bí. Động cũng gắn liền với các câu chuyện tâm linh và là điểm đến khám phá lý thú.",
+      "questions": [
+        {
+          "question": "Động Linh Sơn ở đâu?",
+          "answer": "Động Linh Sơn nằm ở xã Linh Sơn, huyện Đồng Hỷ, cách trung tâm thành phố Thái Nguyên khoảng 25 km. Đây là một hang động đá vôi nổi tiếng với nhũ đá tự nhiên."
+        },
+        {
+          "question": "Động Linh Sơn có gì đặc biệt?",
+          "answer": "Động Linh Sơn nổi bật với hệ thống nhũ đá tự nhiên hình thù độc đáo, tạo nên vẻ đẹp huyền bí. Hang động còn gắn với các câu chuyện tâm linh, thu hút du khách yêu thích khám phá và tìm hiểu văn hóa."
+        },
+        {
+          "question": "Có thể làm gì ở Động Linh Sơn?",
+          "answer": "Tại Động Linh Sơn, bạn có thể khám phá hang động, chiêm ngưỡng nhũ đá, chụp ảnh, hoặc tìm hiểu các câu chuyện tâm linh. Khu vực xung quanh cũng phù hợp để đi bộ và tận hưởng thiên nhiên."
+        },
+        {
+          "question": "Thời điểm nào nên tham quan Động Linh Sơn?",
+          "answer": "Thời điểm tốt nhất để tham quan Động Linh Sơn là từ tháng 11 đến tháng 3, khi thời tiết khô ráo, dễ dàng di chuyển và khám phá hang động mà không lo trơn trượt."
+        },
+        {
+          "question": "Đường đến Động Linh Sơn có khó không?",
+          "answer": "Đường đến Động Linh Sơn cách trung tâm Thái Nguyên khoảng 25 km, đi qua Quốc lộ 1B và đường xã Linh Sơn. Đường đi khá dễ bằng xe máy hoặc ô tô, nhưng lối vào hang có thể cần đi bộ một đoạn ngắn."
+        },
+        {
+          "question": "Động Linh Sơn có nguy hiểm không?",
+          "answer": "Động Linh Sơn không quá nguy hiểm, nhưng bạn cần cẩn thận khi đi trong hang vì sàn đá có thể trơn. Nên mang giày chống trượt và đi cùng hướng dẫn viên để đảm bảo an toàn."
+        },
+        {
+          "question": "Có hướng dẫn viên tại Động Linh Sơn không?",
+          "answer": "Động Linh Sơn thường có người dân địa phương hoặc hướng dẫn viên hỗ trợ du khách. Bạn có thể liên hệ trước với ban quản lý xã Linh Sơn để sắp xếp."
+        },
+        {
+          "question": "Động Linh Sơn có thu phí tham quan không?",
+          "answer": "Động Linh Sơn hiện không thu phí tham quan chính thức, nhưng bạn có thể đóng góp tự nguyện hoặc trả phí nhỏ nếu sử dụng dịch vụ hướng dẫn."
+        },
+        {
+          "question": "Có thể chụp ảnh đẹp ở Động Linh Sơn không?",
+          "answer": "Động Linh Sơn là nơi lý tưởng để chụp ảnh với nhũ đá tự nhiên và ánh sáng huyền ảo trong hang. Khu vực ngoài hang cũng có khung cảnh thiên nhiên đẹp để check-in."
+        },
+        {
+          "question": "Có nơi nghỉ gần Động Linh Sơn không?",
+          "answer": "Gần Động Linh Sơn có một số homestay ở xã Linh Sơn hoặc bạn có thể nghỉ tại thành phố Thái Nguyên, cách khoảng 25 km. Khu vực này còn khá hoang sơ, nên cần chuẩn bị kỹ."
+        }
+      ]
+    },
+    {
+      "name": "Suối Đát Đắng",
+      "lat": 21.9000,
+      "lng": 105.5833,
+      "description": "Suối Đát Đắng nằm ở xã Phú Đình, huyện Định Hóa, cách trung tâm Thái Nguyên khoảng 50 km. Suối nổi tiếng với dòng nước trong xanh, mát lạnh, chảy qua những tảng đá lớn giữa rừng núi. Đây là điểm đến lý tưởng cho du khách yêu thích thiên nhiên và muốn thư giãn.",
+      "questions": [
+        {
+          "question": "Suối Đát Đắng ở đâu?",
+          "answer": "Suối Đát Đắng nằm ở xã Phú Đình, huyện Định Hóa, cách trung tâm thành phố Thái Nguyên khoảng 50 km. Đây là một dòng suối trong xanh giữa rừng núi Định Hóa."
+        },
+        {
+          "question": "Suối Đát Đắng có gì đặc biệt?",
+          "answer": "Suối Đát Đắng nổi bật với dòng nước trong xanh, mát lạnh, chảy qua những tảng đá lớn, tạo nên khung cảnh thơ mộng. Không gian yên bình và thiên nhiên hoang sơ khiến nơi đây lý tưởng để thư giãn."
+        },
+        {
+          "question": "Có thể làm gì ở Suối Đát Đắng?",
+          "answer": "Tại Suối Đát Đắng, bạn có thể tắm suối, chụp ảnh, tổ chức picnic, hoặc đi bộ khám phá khu vực rừng xung quanh. Đây là nơi tuyệt vời để thư giãn và tận hưởng thiên nhiên."
+        },
+        {
+          "question": "Thời điểm nào nên đến Suối Đát Đắng?",
+          "answer": "Thời điểm tốt nhất để tham quan Suối Đát Đắng là từ tháng 4 đến tháng 9, khi thời tiết ấm áp và dòng suối có lượng nước ổn định, phù hợp để tắm và vui chơi."
+        },
+        {
+          "question": "Đường đến Suối Đát Đắng có dễ không?",
+          "answer": "Đường đến Suối Đát Đắng cách trung tâm Thái Nguyên khoảng 50 km, đi qua Quốc lộ 3 và đường xã Phú Đình. Đường đi bằng xe máy hoặc ô tô khá thuận tiện, nhưng một số đoạn gần suối có thể cần đi bộ."
+        },
+        {
+          "question": "Có thể tắm ở Suối Đát Đắng không?",
+          "answer": "Suối Đát Đắng có dòng nước trong và mát, rất phù hợp để tắm. Tuy nhiên, cần cẩn thận với các khu vực nước sâu hoặc đá trơn để đảm bảo an toàn."
+        },
+        {
+          "question": "Có nơi nghỉ gần Suối Đát Đắng không?",
+          "answer": "Khu vực Suối Đát Đắng khá hoang sơ, nên không có nhiều khách sạn. Bạn có thể nghỉ tại các homestay ở huyện Định Hóa hoặc quay về thành phố Thái Nguyên, cách khoảng 50 km."
+        },
+        {
+          "question": "Suối Đát Đắng có thu phí không?",
+          "answer": "Suối Đát Đắng hiện không thu phí tham quan. Du khách có thể tự do khám phá, nhưng nên giữ gìn vệ sinh và bảo vệ môi trường."
+        },
+        {
+          "question": "Có thể cắm trại ở Suối Đát Đắng không?",
+          "answer": "Bạn có thể cắm trại gần Suối Đát Đắng ở các bãi đất bằng phẳng dọc suối. Cần chuẩn bị lều trại, đồ ăn, và kiểm tra thời tiết để có trải nghiệm an toàn."
+        },
+        {
+          "question": "Suối Đát Đắng có gì gần đó để tham quan?",
+          "answer": "Gần Suối Đát Đắng, bạn có thể kết hợp tham quan ATK Định Hóa hoặc các bản làng dân tộc ở huyện Định Hóa, mang lại trải nghiệm văn hóa và lịch sử độc đáo."
+        }
+      ]
+    },
+    {
+      "name": "Hồ Vai Miếu",
+      "lat": 21.6833,
+      "lng": 105.7167,
+      "description": "Hồ Vai Miếu nằm ở xã Phú Cường, huyện Đại Từ, cách trung tâm Thái Nguyên khoảng 20 km. Hồ có diện tích khoảng 60 ha, được bao quanh bởi đồi núi xanh mướt, là nơi lý tưởng cho các hoạt động dã ngoại, câu cá, và chèo thuyền.",
+      "questions": [
+        {
+          "question": "Hồ Vai Miếu ở đâu?",
+          "answer": "Hồ Vai Miếu nằm ở xã Phú Cường, huyện Đại Từ, cách trung tâm thành phố Thái Nguyên khoảng 20 km. Đây là một hồ nước ngọt với cảnh quan thiên nhiên tuyệt đẹp."
+        },
+        {
+          "question": "Hồ Vai Miếu có gì hấp dẫn?",
+          "answer": "Hồ Vai Miếu có diện tích 60 ha, được bao quanh bởi đồi núi xanh mướt, tạo nên không gian yên bình. Đây là điểm đến lý tưởng cho các hoạt động dã ngoại, câu cá, chèo thuyền, và thư giãn."
+        },
+        {
+          "question": "Có thể làm gì ở Hồ Vai Miếu?",
+          "answer": "Tại Hồ Vai Miếu, bạn có thể tổ chức picnic, cắm trại, câu cá, chèo thuyền, hoặc chụp ảnh giữa khung cảnh hồ nước và núi rừng. Đây là nơi tuyệt vời cho nhóm bạn và gia đình."
+        },
+        {
+          "question": "Thời điểm nào nên đến Hồ Vai Miếu?",
+          "answer": "Thời điểm tốt nhất để tham quan Hồ Vai Miếu là từ tháng 3 đến tháng 9, khi thời tiết ấm áp, cảnh quan xanh tươi, phù hợp cho các hoạt động ngoài trời."
+        },
+        {
+          "question": "Đường đến Hồ Vai Miếu có dễ không?",
+          "answer": "Đường đến Hồ Vai Miếu cách trung tâm Thái Nguyên khoảng 20 km, đi qua Quốc lộ 37 và đường xã Phú Cường. Đường đi bằng xe máy hoặc ô tô khá dễ dàng, có biển chỉ dẫn."
+        },
+        {
+          "question": "Có thể câu cá ở Hồ Vai Miếu không?",
+          "answer": "Hồ Vai Miếu là điểm đến phổ biến để câu cá với nhiều loại cá tự nhiên như cá chép, cá trôi. Bạn nên mang theo cần câu và kiểm tra quy định địa phương."
+        },
+        {
+          "question": "Hồ Vai Miếu có thu phí không?",
+          "answer": "Hồ Vai Miếu hiện không thu phí tham quan, nhưng nếu thuê thuyền hoặc sử dụng dịch vụ địa phương, bạn có thể cần trả phí nhỏ."
+        },
+        {
+          "question": "Có nơi nghỉ gần Hồ Vai Miếu không?",
+          "answer": "Gần Hồ Vai Miếu có một số homestay và nhà nghỉ ở huyện Đại Từ. Bạn cũng có thể quay về thành phố Thái Nguyên, cách khoảng 20 km, để tìm khách sạn."
+        },
+        {
+          "question": "Hồ Vai Miếu có phù hợp cho trẻ em không?",
+          "answer": "Hồ Vai Miếu phù hợp cho trẻ em với không gian rộng rãi, an toàn để vui chơi và khám phá. Các hoạt động như chèo thuyền hoặc picnic cũng rất thú vị cho gia đình."
+        },
+        {
+          "question": "Có thể cắm trại ở Hồ Vai Miếu không?",
+          "answer": "Bạn có thể cắm trại gần Hồ Vai Miếu ở các bãi đất trống quanh hồ. Cần chuẩn bị lều trại, đồ ăn, và kiểm tra thời tiết để có trải nghiệm thoải mái."
+        }
+      ]
+    },
+    {
+      "name": "Chùa Hang",
+      "lat": 21.6167,
+      "lng": 105.8333,
+      "description": "Chùa Hang nằm ở phường Chùa Hang, thành phố Thái Nguyên, cách trung tâm khoảng 2 km. Đây là ngôi chùa độc đáo được xây dựng trong một hang động tự nhiên, kết hợp giữa kiến trúc Phật giáo và cảnh quan thiên nhiên. Chùa là điểm đến tâm linh và du lịch nổi tiếng.",
+      "questions": [
+        {
+          "question": "Chùa Hang ở đâu?",
+          "answer": "Chùa Hang nằm ở phường Chùa Hang, thành phố, cách trung tâm Thái Nguyên khoảng 2 km. Đây là ngôi chùa độc đáo được xây dựng trong một hang động tự nhiên."
+        },
+        {
+          "question": "Chùa Hang có gì đặc biệt?",
+          "answer": "Chùa Hang nổi bật với vị trí nằm trong hang động tự nhiên, kết hợp giữa kiến trúc Phật giáo và cảnh quan thiên nhiên huyền bí. Không gian yên tĩnh và tâm linh thu hút nhiều du khách đến cầu an."
+        },
+        {
+          "question": "Có thể làm gì ở Chùa Hang?",
+          "answer": "Tại Chùa Hang, bạn có thể dâng hương, cầu nguyện, tham quan hang động, chiêm ngưỡng các tượng Phật, và tận hưởng không gian yên bình. Khu vực xung quanh chùa cũng phù hợp để chụp ảnh."
+        },
+        {
+          "question": "Thời điểm nào nên thăm Chùa Hang?",
+          "answer": "Chùa Hang có thể tham quan quanh năm, nhưng thời điểm đông nhất là vào dịp đầu năm (tháng 1 đến tháng 3 âm lịch) khi nhiều người đến lễ chùa cầu may."
+        },
+        {
+          "question": "Đường đến Chùa Hang có dễ không?",
+          "answer": "Đường đến Chùa Hang rất dễ, cách trung tâm thành phố Thái Nguyên chỉ 2 km, đi bằng xe máy, ô tô hoặc thậm chí đi bộ. Có biển chỉ dẫn rõ ràng đến chùa."
+        },
+        {
+          "question": "Chùa Hang có thu phí tham quan không?",
+          "answer": "Chùa Hang không thu phí tham quan. Du khách có thể đóng góp tự nguyện để bảo trì và duy trì hoạt động của chùa."
+        },
+        {
+          "question": "Chùa Hang có phù hợp cho người cao tuổi không?",
+          "answer": "Chùa Hang rất phù hợp cho người cao tuổi vì lối vào hang bằng phẳng và không gian yên tĩnh, tạo cảm giác thư giãn và dễ di chuyển."
+        },
+        {
+          "question": "Có lễ hội gì ở Chùa Hang?",
+          "answer": "Chùa Hang tổ chức lễ hội vào ngày 8-10 tháng Giêng âm lịch, thu hút nhiều du khách với các hoạt động lễ Phật, văn nghệ, và các nghi thức truyền thống."
+        },
+        {
+          "question": "Có quán ăn gần Chùa Hang không?",
+          "answer": "Gần Chùa Hang có nhiều quán ăn và nhà hàng ở khu vực thành phố Thái Nguyên, phục vụ các món đặc sản như bún chả, gà đồi, và chè Tân Cương."
+        },
+        {
+          "question": "Chùa Hang có gì liên quan đến tâm linh?",
+          "answer": "Chùa Hang là nơi linh thiêng để cầu an, cầu sức khỏe, và cầu tài lộc. Nhiều người tin rằng hang động tự nhiên mang lại năng lượng tích cực và may mắn."
+        }
+      ]
+    },
+    {
+      "name": "Hồ Suối Lạnh",
+      "lat": 21.6833,
+      "lng": 105.7167,
+      "description": "Hồ Suối Lạnh nằm ở xã Tân Thái, huyện Đại Từ, cách trung tâm Thái Nguyên khoảng 15 km. Hồ có diện tích khoảng 15 ha, được bao quanh bởi rừng thông và đồi chè, tạo nên khung cảnh thơ mộng, yên bình. Đây là điểm đến lý tưởng cho dã ngoại và thư giãn.",
+      "questions": [
+        {
+          "question": "Hồ Suối Lạnh ở đâu?",
+          "answer": "Hồ Suối Lạnh nằm ở xã Tân Thái, huyện Đại Từ, cách trung tâm thành phố Thái Nguyên khoảng 15 km. Đây là một hồ nước ngọt với cảnh quan thơ mộng."
+        },
+        {
+          "question": "Hồ Suối Lạnh có gì hấp dẫn?",
+          "answer": "Hồ Suối Lạnh được bao quanh bởi rừng thông và đồi chè, tạo nên khung cảnh yên bình, thơ mộng. Đây là nơi lý tưởng để thư giãn, dã ngoại, và tận hưởng thiên nhiên."
+        },
+        {
+          "question": "Có thể làm gì ở Hồ Suối Lạnh?",
+          "answer": "Tại Hồ Suối Lạnh, bạn có thể tổ chức picnic, cắm trại, đi bộ ngắm cảnh, chụp ảnh, hoặc chèo thuyền trên hồ. Khu vực rừng thông cũng rất phù hợp để khám phá."
+        },
+        {
+          "question": "Thời điểm nào nên đến Hồ Suối Lạnh?",
+          "answer": "Thời điểm tốt nhất để tham quan Hồ Suối Lạnh là từ tháng 3 đến tháng 9, khi thời tiết mát mẻ, cảnh quan xanh tươi, phù hợp cho các hoạt động ngoài trời."
+        },
+        {
+          "question": "Đường đến Hồ Suối Lạnh có dễ không?",
+          "answer": "Đường đến Hồ Suối Lạnh cách trung tâm Thái Nguyên khoảng 15 km, đi qua Quốc lộ 37 và đường xã Tân Thái. Đường đi bằng xe máy hoặc ô tô khá dễ, có biển chỉ dẫn rõ ràng."
+        },
+        {
+          "question": "Hồ Suối Lạnh có thu phí không?",
+          "answer": "Hồ Suối Lạnh hiện không thu phí tham quan. Tuy nhiên, nếu sử dụng dịch vụ như thuê thuyền hoặc cắm trại, bạn có thể cần trả phí nhỏ cho người dân địa phương."
+        },
+        {
+          "question": "Có thể cắm trại ở Hồ Suối Lạnh không?",
+          "answer": "Hồ Suối Lạnh rất phù hợp để cắm trại ở các bãi đất trống gần hồ hoặc trong khu vực rừng thông. Cần chuẩn bị lều trại và đồ ăn để có trải nghiệm thoải mái."
+        },
+        {
+          "question": "Có nơi nghỉ gần Hồ Suối Lạnh không?",
+          "answer": "Gần Hồ Suối Lạnh có một số homestay ở xã Tân Thái hoặc huyện Đại Từ. Bạn cũng có thể nghỉ tại thành phố Thái Nguyên, cách khoảng 15 km."
+        },
+        {
+          "question": "Hồ Suối Lạnh có phù hợp cho nhóm bạn không?",
+          "answer": "Hồ Suối Lạnh là điểm đến lý tưởng cho nhóm bạn với không gian rộng rãi, phù hợp để tổ chức cắm trại, tiệc BBQ, và các hoạt động dã ngoại."
+        },
+        {
+          "question": "Hồ Suối Lạnh có gì gần đó để tham quan?",
+          "answer": "Gần Hồ Suối Lạnh, bạn có thể kết hợp tham quan Hồ Núi Cốc hoặc Đồi chè Tân Cương, đều nằm trong khu vực huyện Đại Từ, tạo thành hành trình khám phá thú vị."
+        }
+      ]
+    }
+  ]
+}
