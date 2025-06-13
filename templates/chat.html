@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Du lịch Thái Nguyên - Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Thanh menu -->
+  <nav class="navbar">
+    <div class="navbar-brand">Du lịch Thái Nguyên</div>
+    <div class="navbar-menu-container">
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="{{ url_for('index') }}" class="active">Trang chủ</a></li>
+        <li><a href="{{ url_for('index')}}#dia-diem-noi-bat">Địa điểm nổi bật</a></li>
+        <li><a href="{{ url_for('itinerary') }}">Hành trình</a></li>
+        <li><a href="{{ url_for('chat') }}">Chatbot AI</a></li>
+        <li><a href="{{ url_for('history') }}">Lịch sử Chat Bot</a></li>
+        <li><a href="{{ url_for('map') }}">Bản đồ</a></li>
+        <li><a href="{{ url_for('contact') }}">Phản hồi</a></li>
+      </ul>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+
+  <!-- Khung chat -->
+  <div class="chat-container full-page">
+    <div class="chat-header">
+      <h2>🤖 Chatbot 🤖</h2>
+    </div>
+    <div class="suggestions">
+      <h3>Gợi ý câu hỏi:</h3>
+      <button class="suggestion-btn" onclick="fillSuggestion('Những địa điểm du lịch nổi bật ở Thái Nguyên?')">Những địa điểm du lịch nổi bật?</button>
+      <button class="suggestion-btn" onclick="fillSuggestion('Lịch sử của ATK Định Hóa?')">Lịch sử ATK Định Hóa?</button>
+      <button class="suggestion-btn" onclick="fillSuggestion('Có những hoạt động gì ở Hồ Núi Cốc?')">Hoạt động ở Hồ Núi Cốc?</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      {% include 'chat_body.html' %}
+      <div class="loading" id="loading" style="display: none;">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    <form class="chat-footer" id="chat-form">
+      <textarea name="input" placeholder="Nhập câu hỏi về du lịch tại đây..."></textarea>
+      <button type="button" onclick="sendMessage()">Gửi</button>
+    </form>
+  </div>
+  <a href="{{ url_for('history') }}" class="button-link">Lịch sử chatbot</a>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
